@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/protected/controllers/FirstController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/protected/controllers/FrontController.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/contact.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/fonts" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/images" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/index - Copy.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/introduction.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/order.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/product-detail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/product.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/support-detail.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/themes/user-theme/support.html" charset="UTF-8" />
+  </component>
+</project>
+

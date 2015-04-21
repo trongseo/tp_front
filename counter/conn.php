@@ -6,7 +6,7 @@
 //define("DB_USERNAME","test_glass1");
 //define("DB_PASSWORD","123456789");
 // DB CONNECT INFO
-require_once($_SERVER['DOCUMENT_ROOT'].'/DB_CONFIG.php');
+
 
 $db_host = DB_HOST;
 $db_name = DB_NAME;

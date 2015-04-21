@@ -4,10 +4,10 @@ return CMap::mergeArray(
     array(
         'components' => array(
             'db' => array(
-                'connectionString' => 'mysql:host=chuyennhat.vn;dbname=test_glass1',
+                'connectionString' => 'mysql:host='.DB_HOST.';dbname='.DB_NAME,
                 'emulatePrepare' => true,
-                'username' => 'test_glass1',
-                'password' => '123456789',
+                'username' => DB_USERNAME,
+                'password' => DB_PASSWORD,
                 'charset' => 'utf8',
                 'schemaCachingDuration' => 60 * 60,
             ),

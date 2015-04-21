@@ -6,7 +6,8 @@
 // CWebApplication properties can be configured here.
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'QUIZ A TEST',
+    'name' => 'KINHTANPHUC.COM',
+    'defaultController' => 'first',
    // 'theme' => 'admin-green',
     'theme' => 'admin-template',
     // preloading 'log' component
