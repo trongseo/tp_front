@@ -14,26 +14,52 @@ class FrontController extends CController {
 
         $datasan_pham_loai_guid = CommonDB::GetAll("Select san_pham_loai_guid,ten_loai from san_pham_loai order by so_thu_tu ",[]);
         $datasp=[];
-       if(isset($datasan_pham_loai_guid[0]["san_pham_loai_guid"])){
-           $loaisp = $datasan_pham_loai_guid[0]["san_pham_loai_guid"];
-           $datasp= CommonDB::GetAll("Select * from san_pham where  san_pham_loai_guid='$loaisp' order by date_create desc ",[]);
-       }
+//       if(isset($datasan_pham_loai_guid[0]["san_pham_loai_guid"])){
+//           $loaisp = $datasan_pham_loai_guid[0]["san_pham_loai_guid"];
+//           $datasp= CommonDB::GetAll("Select * from san_pham where  san_pham_loai_guid='$loaisp' order by date_create desc ",[]);
+//       }
       //san pham nay co bao nhieu mau
         $spdautienid='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF';//$datasp[0]["san_pham_guid"];
+
+
+       // var_dump($datamausp,$spdautienid);exit();
+      // $color_id= $datamausp[0]["color_id"];
+        //mau dau tien co bao nhieu kich co
+//        $datakichco= CommonDB::GetAll("SELECT *,'$color_id' AS color_id,'$spdautienid' as san_pham_guid FROM `m_size` WHERE m_size_guid IN (
+//                                        SELECT m_size_guid FROM `san_pham_price`
+//                                        WHERE `san_pham_guid`='$spdautienid' AND color_id='$color_id'  )",[]);
+        //var_dump($datamausp,$datakichco);
+        //$dataspshow = $datasp[0];
+        $dataspshow = $this->getDetailSP($spdautienid);
+        $this->render('sanpham',  array('dataloaisp'=>$datasan_pham_loai_guid,'dataspshow'=>$dataspshow));
+    }
+    public function getDetailSP($guid_id){
+        $datasp= CommonDB::GetDataRowKeyGuid("san_pham",$guid_id);
         $datamausp= CommonDB::GetAll("SELECT * FROM m_color WHERE color_id IN (
                                         SELECT color_id FROM `san_pham_price`
-                                        WHERE `san_pham_guid`='$spdautienid' ) ",[]);
-       // var_dump($datamausp,$spdautienid);exit();
-       $color_id= $datamausp[0]["color_id"];
-        //mau dau tien co bao nhieu kich co
-        $datakichco= CommonDB::GetAll("SELECT *,'$color_id' AS color_id,'$spdautienid' as san_pham_guid FROM `m_size` WHERE m_size_guid IN (
+                                        WHERE `san_pham_guid`='$guid_id' ) ",[]);
+        $datakichco=[];
+        if(count($datamausp)>0){
+            $color_id= $datamausp[0]['color_id'];
+            $datakichco= CommonDB::GetAll("SELECT *,'$color_id' AS color_id,'$guid_id' as san_pham_guid FROM `m_size` WHERE m_size_guid IN (
                                         SELECT m_size_guid FROM `san_pham_price`
-                                        WHERE `san_pham_guid`='$spdautienid' AND color_id='$color_id'  )",[]);
-var_dump($datamausp,$datakichco);
+                                        WHERE `san_pham_guid`='$guid_id' AND color_id='$color_id' order by  size_text  )",[]);
+        }
 
-        $this->render('sanpham',  array('dataloaisp'=>$datasan_pham_loai_guid,'datasp'=>$datasp));
+        return array('datasp'=>$datasp,'datakichco'=>$datakichco,'datamausp'=>$datamausp);
     }
-
+    public function actionAjaxGetSize() {
+        Yii::app()->theme = '';
+        $san_pham_guid = $_REQUEST["san_pham_guid"];//luon luon co hidden field
+        $color_id = $_REQUEST["color_id"];//luon luon co hidden field
+        $datasize= CommonDB::GetAll("   SELECT  size_text,sp_price,aa.san_pham_price_guid,color_id FROM m_size a, san_pham_price aa
+                           WHERE a.m_size_guid = aa.m_size_guid AND
+                         a.`m_size_guid` IN( SELECT m_size_guid FROM san_pham_price
+                         WHERE `san_pham_guid`='$san_pham_guid'  AND color_id='$color_id')
+                         AND  aa.`san_pham_guid`='$san_pham_guid' AND color_id='$color_id'
+                         ORDER BY size_text ",[]);
+        echo  json_encode($datasize);
+    }
     public function actionAjaxupdate() {
         Yii::app()->theme = '';
         if( isset($_POST['bsubmit'])) {

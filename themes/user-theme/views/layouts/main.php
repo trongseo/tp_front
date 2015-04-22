@@ -15,7 +15,9 @@
     <meta name="keywords" content=" " />
     <meta name="description" content=" ">
     <meta name="author" content=" ">
-
+    <!-- Javascript =============================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="themes/user-theme/js/jquery.js"></script>
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -99,9 +101,7 @@
 </div>
 
 
-<!-- Javascript =============================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="themes/user-theme/js/jquery.js"></script>
+
 <!--[if lt IE 9]>
 <script type="text/javascript" src="themes/user-theme/js/excanvas.js"></script>
 <![endif]-->
