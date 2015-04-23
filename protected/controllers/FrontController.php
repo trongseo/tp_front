@@ -35,12 +35,15 @@ class FrontController extends CController {
     }
     public function getDetailSP($guid_id){
         $datasp= CommonDB::GetDataRowKeyGuid("san_pham",$guid_id);
+       $tenloai =  CommonDB::GetDataRowKeyGuid('san_pham_loai',$datasp['san_pham_loai_guid'])   ;
+        $datasp['danhmuc']=$tenloai['ten_loai'];
         $datamausp= CommonDB::GetAll("SELECT * FROM m_color WHERE color_id IN (
                                         SELECT color_id FROM `san_pham_price`
                                         WHERE `san_pham_guid`='$guid_id' ) ",[]);
         $datakichco=[];
         if(count($datamausp)>0){
             $color_id= $datamausp[0]['color_id'];
+
             $datakichco= CommonDB::GetAll("SELECT *,'$color_id' AS color_id,'$guid_id' as san_pham_guid FROM `m_size` WHERE m_size_guid IN (
                                         SELECT m_size_guid FROM `san_pham_price`
                                         WHERE `san_pham_guid`='$guid_id' AND color_id='$color_id' order by  size_text  )",[]);
@@ -48,11 +51,20 @@ class FrontController extends CController {
 
         return array('datasp'=>$datasp,'datakichco'=>$datakichco,'datamausp'=>$datamausp);
     }
+    public function actionAjaxImageColor() {
+        Yii::app()->theme = '';
+        $san_pham_guid = $_REQUEST["san_pham_guid"];//luon luon co hidden field
+        $color_id = $_REQUEST["color_id"];//luon luon co hidden field
+        $subquery=" SELECT `image1` FROM `san_pham_hinh`  WHERE `san_pham_guid`='$san_pham_guid' AND `color_guid_id`='$color_id' order by so_thu_tu LIMIT 1
+                               ";
+        $dataimage= CommonDB::GetAll($subquery,[]);
+        echo  json_encode($dataimage);
+    }
     public function actionAjaxGetSize() {
         Yii::app()->theme = '';
         $san_pham_guid = $_REQUEST["san_pham_guid"];//luon luon co hidden field
         $color_id = $_REQUEST["color_id"];//luon luon co hidden field
-        $datasize= CommonDB::GetAll("   SELECT  size_text,sp_price,aa.san_pham_price_guid,color_id FROM m_size a, san_pham_price aa
+        $datasize= CommonDB::GetAll("   SELECT  size_text, REPLACE( FORMAT(sp_price, 0),',','.') as  sp_price,aa.san_pham_price_guid,color_id FROM m_size a, san_pham_price aa
                            WHERE a.m_size_guid = aa.m_size_guid AND
                          a.`m_size_guid` IN( SELECT m_size_guid FROM san_pham_price
                          WHERE `san_pham_guid`='$san_pham_guid'  AND color_id='$color_id')

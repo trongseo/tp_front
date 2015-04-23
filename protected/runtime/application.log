@@ -4411,3 +4411,95 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/index.php?r=front/sanpham
 ---
+2015/04/22 16:35:36 [error] [php] Undefined variable: datamausp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:26)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (26)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/22 16:36:53 [error] [php] Undefined variable: color_id (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/22 16:37:10 [error] [php] Undefined offset: 0 (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:32)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (32)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/22 16:52:00 [error] [php] Undefined variable: color_id1 (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:59)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/AjaxGetSize&san_pham_guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF&color_id=1
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (59)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/22 16:53:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 6. The SQL statement executed was:    SELECT  size_text,sp_price,aa.san_pham_price_guid,color_id FROM m_size a, san_pham_price aa
+                           WHERE a.m_size_guid = aa.m_size_guid AND
+                         a.`m_size_guid` IN( SELECT m_size_guid FROM san_pham_price
+                         WHERE `san_pham_guid`='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF'  AND color_id='1')
+                         AND  aa.`san_pham_guid`='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF' AND color_id='1'
+                         ORDER BY size_text ).
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\components\CommonDB.php (43)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (60)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/22 16:53:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 6. The SQL statement executed was:    SELECT  size_text,sp_price,aa.san_pham_price_guid,color_id FROM m_size a, san_pham_price aa
+                           WHERE a.m_size_guid = aa.m_size_guid AND
+                         a.`m_size_guid` IN( SELECT m_size_guid FROM san_pham_price
+                         WHERE `san_pham_guid`='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF'  AND color_id='1')
+                         AND  aa.`san_pham_guid`='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF' AND color_id='1'
+                         ORDER BY size_text )' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\components\CommonDB.php(43): CDbCommand->queryAll()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(60): CommonDB::GetAll('   SELECT  size...', Array)
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionAjaxGetSize()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('AjaxGetSize')
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/AjaxGetSi...')
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=front/AjaxGetSize&san_pham_guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF&color_id=1
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham
+---
+2015/04/23 01:59:00 [error] [php] Array to string conversion (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:31)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(34): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (31)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (34)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
