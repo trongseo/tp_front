@@ -7,6 +7,10 @@ class Common {
 
         return CommonDB::guid();
     }
+    public static function getPara($key){
+
+        return  isset($_REQUEST[$key])?$_REQUEST[$key]:"";
+    }
 
     public static function menuMultiLevel($data, $models, $link, $tag = null, $tagSub = null) {
         $rowsize = count($data);

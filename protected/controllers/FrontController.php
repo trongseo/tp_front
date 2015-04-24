@@ -11,27 +11,37 @@ class FrontController extends CController {
     }
     public function actionSanPham() {
         $guid_id = '1';
+        $san_pham_loai_guid="";
+         $datasp=[];
+        $spdautienid = Common::getPara("guid");
+        if($spdautienid==""){
+            //san pham nay co bao nhieu mau
+            $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid=(
+                        SELECT san_pham_loai_guid FROM san_pham_loai ORDER BY so_thu_tu LIMIT 1 ) ORDER BY date_create ";
+            $san_pham_loai_guid = Common::getPara("san_pham_loai_guid");
+            if( $san_pham_loai_guid!=""){
+                $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid='$san_pham_loai_guid' ORDER BY date_create limit 1 ";
+            }
+            $dataSP =   CommonDB::GetAll($queryTop,[]);
+            if(count($dataSP)>0){
+                $spdautienid=$dataSP[0]["datasp"];
+            }
+        }
 
-        $datasan_pham_loai_guid = CommonDB::GetAll("Select san_pham_loai_guid,ten_loai from san_pham_loai order by so_thu_tu ",[]);
-        $datasp=[];
-//       if(isset($datasan_pham_loai_guid[0]["san_pham_loai_guid"])){
-//           $loaisp = $datasan_pham_loai_guid[0]["san_pham_loai_guid"];
-//           $datasp= CommonDB::GetAll("Select * from san_pham where  san_pham_loai_guid='$loaisp' order by date_create desc ",[]);
-//       }
-      //san pham nay co bao nhieu mau
-        $spdautienid='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF';//$datasp[0]["san_pham_guid"];
 
 
-       // var_dump($datamausp,$spdautienid);exit();
-      // $color_id= $datamausp[0]["color_id"];
-        //mau dau tien co bao nhieu kich co
-//        $datakichco= CommonDB::GetAll("SELECT *,'$color_id' AS color_id,'$spdautienid' as san_pham_guid FROM `m_size` WHERE m_size_guid IN (
-//                                        SELECT m_size_guid FROM `san_pham_price`
-//                                        WHERE `san_pham_guid`='$spdautienid' AND color_id='$color_id'  )",[]);
-        //var_dump($datamausp,$datakichco);
-        //$dataspshow = $datasp[0];
-        $dataspshow = $this->getDetailSP($spdautienid);
-        $this->render('sanpham',  array('dataloaisp'=>$datasan_pham_loai_guid,'dataspshow'=>$dataspshow));
+        $datasan_pham_loai_guid =  CommonDB::GetAll(" SELECT * FROM san_pham_loai ORDER BY so_thu_tu",[]);
+        //$spdautienid='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF';//$datasp[0]["san_pham_guid"];
+
+      // var_dump($spdautienid ); exit();
+        $dataspshow = [];
+        $noshow =1;
+        if($spdautienid!=""){
+            $dataspshow = $this->getDetailSP($spdautienid);
+            $noshow =0;
+        }
+        $san_pham_loai_guid =$dataspshow["datasp"]["san_pham_loai_guid"];
+        $this->render('sanpham',  array('noshow'=>$noshow,'san_pham_loai_guid'=>$san_pham_loai_guid,'dataloaisp'=>$datasan_pham_loai_guid,'dataspshow'=>$dataspshow));
     }
     public function getDetailSP($guid_id){
         $datasp= CommonDB::GetDataRowKeyGuid("san_pham",$guid_id);
@@ -48,8 +58,9 @@ class FrontController extends CController {
                                         SELECT m_size_guid FROM `san_pham_price`
                                         WHERE `san_pham_guid`='$guid_id' AND color_id='$color_id' order by  size_text  )",[]);
         }
-
-        return array('datasp'=>$datasp,'datakichco'=>$datakichco,'datamausp'=>$datamausp);
+        $san_pham_loai_guid=$datasp["san_pham_loai_guid"];
+        $dataSPCungLoai = CommonDB::GetAll("SELECT * from san_pham where  san_pham_loai_guid='".$san_pham_loai_guid."' order by ma_sp",[]);
+        return array('datasp'=>$datasp,'datakichco'=>$datakichco,'datamausp'=>$datamausp,'dataSPCungLoai'=>$dataSPCungLoai);
     }
     public function actionAjaxImageColor() {
         Yii::app()->theme = '';

@@ -67,16 +67,16 @@
                         <a class="dropdown-link">Menu</a>
                         <ul class="nav navbar-nav mobile-dropdown">
                             <li>
-                                <a href="introduction.html"><span class="underline">Giới Thiệu</span></a>
+                                <a href="index.php?r=first"><span class="underline">Giới Thiệu</span></a>
                             </li>
                             <li class="active" >
-                                <a href="product.html"  ><span class="underline">Sản Phẩm</span></a>
+                                <a href="index.php?r=front/sanpham"  ><span class="underline">Sản Phẩm</span></a>
                             </li>
                             <li>
-                                <a href="support.html"><span class="underline">Hỗ Trợ Kỹ Thuật</span></a>
+                                <a href="index.php?r=front/support"><span class="underline">Hỗ Trợ Kỹ Thuật</span></a>
                             </li>
                             <li>
-                                <a href="contact.html"><span class="underline">Liên Hệ</span></a>
+                                <a href="index.php?r=front/contact"><span class="underline">Liên Hệ</span></a>
                             </li>
                         </ul>
                     </nav>

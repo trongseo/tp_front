@@ -21,10 +21,14 @@
         background-color: #ffff00;
     }
 </style>
-<base href="http://localhost:8222/" target="_blank">
+
+<?php if(($noshow=="0")):?>
 <?php
+
 $datasp =$dataspshow['datasp'];$datakichco =$dataspshow['datakichco'];$datamausp =$dataspshow['datamausp'];
+$dataSPCungLoai = $dataspshow["dataSPCungLoai"];
 //array('datasp'=>$datasp,'datakichco'=>$datakichco,'datamausp'=>$datamausp);
+$san_pham_loai_guid= $datasp["san_pham_loai_guid"];
 ?>
     <div class="row">
         <div class="col-md-3 col-sm-4 col-xs-4">
@@ -81,42 +85,26 @@ $datasp =$dataspshow['datasp'];$datakichco =$dataspshow['datakichco'];$datamausp
 							</span>
             </h3>
             <div class="col-md-offset-2 col-md-9 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-                <div class="owl-carousel owl-theme owl-responsive-1000 owl-loaded">
+                <div class="owl-carousel">
 
-                    <div class="owl-stage-outer"><div class="owl-stage" style="width: 1350px; transform: translate3d(-750px, 0px, 0px); transition: 0.25s; -webkit-transition: 0.25s;"><div class="owl-item" style="width: auto; margin-right: 15px;"><div class=" funfact-item   text-center">
-                                    <a href=""><img src="images/Sanpham02.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item" style="width: auto; margin-right: 15px;"><div class=" funfact-item text-center">
-                                    <a href=""><img src="images/Sanpham03.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham04.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham05.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham06.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item active" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham02.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item active" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham04.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item active" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham03.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div><div class="owl-item active" style="width: auto; margin-right: 15px;"><div class=" funfact-item color-waikawa_gray text-center">
-                                    <a href=""><img src="images/Sanpham05.png" alt=""></a>
-                                    <a class="detail" href="product-detail.html"><span>chi tiết</span></a>
-                                </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style=""><i class="fa fa-angle-left"></i></div><div class="owl-next" style=""><i class="fa fa-angle-right"></i></div></div><div class="owl-dots" style=""><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
+                    <?php foreach($dataSPCungLoai as $value):?>
+                        <div class=" funfact-item   text-center">
+                            <a href=""><img src="item_image/icon_<?php echo $value["hinh_dai_dien"]?>" alt=""></a>
+                            <a class="detail" href="index.php?r=front/sanphamchitiet&guid=<?php echo $value["san_pham_guid"]?>"><span>chi tiết</span></a>
+                        </div>
+
+
+                    <?php endforeach?>
+
+
+
+                </div>
                 <!-- end ourstory carousel -->
 
             </div>
-
         </div>
     </div>
+
 <style>
     label{
         font-weight: 3;
@@ -194,12 +182,8 @@ $datasp =$dataspshow['datasp'];$datakichco =$dataspshow['datakichco'];$datamausp
 //
 
 
-    $(function(){
-        var menuchild = $("#menuchild").html();
 
-        $("ul > .active").append(menuchild);
-    });
-</script>
+    </script>
 <script type="text/template" id="repeating-form-section-template">
     <li>
         <input type="radio" xxxcheckedxxx class="rdSelect" name="radiosize" id="zzzsan_pham_price_guidzzz" san_pham_price_guid='zzzsan_pham_price_guidzzz'  sp_price='zzzsp_pricezzz' >
@@ -208,22 +192,32 @@ $datasp =$dataspshow['datasp'];$datakichco =$dataspshow['datakichco'];$datamausp
 									</span></label>
     </li>
 </script>
+
+<?php endif ?>
 <script type="text/template" id="menuchild">
-<div class="sub-menu" id="menusanpham">
-    <ul>
+    <div class="sub-menu" id="menusanpham">
+        <ul>
           <?php foreach($dataloaisp as $value):?>
-                        <li>
-        <li>
-            <a href=""><span class="underline color-black"><?php echo $value["ten_loai"]?> </span></a>
+
+        <li id='li<?php echo $value["san_pham_loai_guid"]?>'>
+            <a href="index.php?r=front/sanpham&san_pham_loai_guid=<?php echo $value["san_pham_loai_guid"]?>"><span class="underline color-black"><?php echo $value["ten_loai"]?> </span></a>
 
 
+        </li>
 
-									</li>
-    </li>
 
 
                     <?php endforeach?>
 
     </ul>
-</div>
+    </div>
+</script>
+<script>
+$(function(){
+var menuchild = $("#menuchild").html();
+
+$("ul > .active").append(menuchild);
+var san_pham_loai_guid='<?php echo $san_pham_loai_guid ?>' ;
+$('#li'+san_pham_loai_guid).addClass("active");
+});
 </script>

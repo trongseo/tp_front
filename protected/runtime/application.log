@@ -4503,3 +4503,417 @@ REQUEST_URI=/index.php?r=front/sanpham
 in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (31)
 in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (34)
 in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 16:42:37 [error] [php] Undefined index: dataSPCungLoai (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:27)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(34): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (27)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (34)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 16:51:27 [error] [php] Array to string conversion (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:94)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(34): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (94)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (34)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 17:49:59 [error] [php] Array to string conversion (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\components\CommonDB.php:73)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\components\CommonDB.php (73)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (20)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 17:50:38 [error] [php] Undefined variable: datasan_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:27)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (27)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 17:50:52 [error] [php] Undefined variable: dataloaisp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:201)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(27): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (201)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (27)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 17:54:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sanphamchitiet".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('sanphamchitiet')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanphamchitiet')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanphamch...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=front/sanphamchitiet&guid=5E24A299_A16E_9914_6036_4FD8F5AFDCCD
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham&san_pham_loai_guid=2
+---
+2015/04/24 17:58:12 [error] [php] Undefined offset: 0 (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:24)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=1
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (24)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:01:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column '25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85' in 'where clause'. The SQL statement executed was:   SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85 ORDER BY date_create limit 1 .
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\components\CommonDB.php (43)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (25)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:01:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column '25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85' in 'where clause'. The SQL statement executed was:   SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85 ORDER BY date_create limit 1 ' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\components\CommonDB.php(43): CDbCommand->queryAll()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(25): CommonDB::GetAll('  SELECT san_ph...', Array)
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanpham')
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanpham')
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham
+---
+2015/04/24 18:02:18 [error] [php] Undefined index: san_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:39)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (34)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:03:10 [error] [php] Undefined index: san_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:42)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (42)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (36)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:03:32 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:26)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(38): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (26)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (38)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:06:11 [error] [php] Undefined variable: datamausp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:168)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(38): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (168)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (38)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:08:10 [error] [php] Undefined variable: san_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:219)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(38): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (219)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (38)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:09:36 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(38): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (38)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:11:25 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:11:43 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:11:44 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:12:12 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:12:13 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:12:14 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:12:14 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:12:46 [error] [php] Undefined index: datasp (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): FrontController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): FrontController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php(39): FrontController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): FrontController->actionSanPham()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&san_pham_loai_guid=25F90BD0_A5B6_9DF1_7E1E_9B0719E71A85
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\front\sanpham.php (28)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (39)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:14:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sanphamchitiet".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('sanphamchitiet')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanphamchitiet')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanphamch...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=front/sanphamchitiet&guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham&san_pham_loai_guid=041B5D8C_9A9A_DD3F_681E_D5D127791E27
+---
+2015/04/24 18:16:57 [error] [php] Undefined variable: san_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:43)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=front/sanpham&guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php (43)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
+2015/04/24 18:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sanphamchitiet".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('sanphamchitiet')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanphamchitiet')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanphamch...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=front/sanphamchitiet&guid=5E24A299_A16E_9914_6036_4FD8F5AFDCCD
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham&guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+---
+2015/04/24 18:19:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sanphamchitiet".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('sanphamchitiet')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanphamchitiet')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanphamch...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=front/sanphamchitiet&guid=902B674D-DAB9-BD67-A1C7-5F7EAB95B064
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham&guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+---
+2015/04/24 18:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sanphamchitiet".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('sanphamchitiet')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanphamchitiet')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanphamch...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=front/sanphamchitiet&guid=EF8DD051-60EF-DB41-3502-3554194407DF
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham&guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+---
+2015/04/24 18:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sanphamchitiet".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('sanphamchitiet')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('sanphamchitiet')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('front/sanphamch...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=front/sanphamchitiet&guid=EF8DD051-60EF-DB41-3502-3554194407DF
+HTTP_REFERER=http://localhost:1111/index.php?r=front/sanpham&guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+---
