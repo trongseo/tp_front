@@ -9,6 +9,54 @@ class FrontController extends CController {
         $this->pageTitle = $data["aaatitle"];
         $this->render('intro',  array('hsTable'=>$data));
     }
+    public function actionSanphamchitiet() {
+
+         $guid_id = Common::getPara("san_pham_guid");
+        $datasan_pham_loai_guid =  CommonDB::GetAll(" SELECT * FROM san_pham_loai ORDER BY so_thu_tu",[]);
+        $dataspshow = $this->getChiTiet($guid_id);
+        $this->render('sanphamdetail',  array('dataspshow'=>$dataspshow,'dataloaisp'=>$datasan_pham_loai_guid));
+    }
+    public function actionDathang() {
+
+        $guid_id = Common::getPara("san_pham_guid");
+        if( isset($_POST["btnsave"]) )
+        {
+            Yii::app()->theme = '';
+            $guid_id=Yii::app()->session['san_pham_guid'];
+            $hsTable["dondathang_guid"]= Common::guid();
+            $hsTable["san_pham_guid"]=$guid_id;
+            $hsTable["hoten"]=$_REQUEST["hoten"];
+            $hsTable["email"]=$_REQUEST["email"];
+            $hsTable["dienthoai"]=$_REQUEST["dienthoai"];
+            $hsTable["fax"]="";
+            $hsTable["diachi"]="";
+            $hsTable["tieude"]=$_REQUEST["tieude"];
+            $hsTable["noidung"]=$_REQUEST["noidung"];
+            $queryI="insert into dondathang(dondathang_guid,san_pham_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:dondathang_guid,:san_pham_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
+            CommonDB::runSQL($queryI,$hsTable);
+
+            echo "ok";
+            return;
+
+        }else{
+
+            Yii::app()->session['san_pham_guid'] =$guid_id;
+        }
+
+        $dataspshow = $this->getChiTiet($guid_id);
+        $this->render('dathang',  array('dataspshow'=>$dataspshow));
+    }
+    public function getChiTiet($guid_id){
+        $datasp= CommonDB::GetDataRowKeyGuid("san_pham",$guid_id);
+        $tenloai =  CommonDB::GetDataRowKeyGuid('san_pham_loai',$datasp['san_pham_loai_guid'])   ;
+        $datasp['ten_loai']=$tenloai['ten_loai'];
+
+        $queryH = " SELECT * FROM `san_pham_hinh` WHERE san_pham_guid='$guid_id'   ORDER BY color_guid_id ";
+        $dataHinh = CommonDB::GetAll($queryH,[]);
+        $san_pham_loai_guid=$datasp["san_pham_loai_guid"];
+
+        return array('datasp'=>$datasp,'dataHinh'=>$dataHinh);
+    }
     public function actionSanPham() {
         $guid_id = '1';
         $san_pham_loai_guid="";
@@ -24,7 +72,8 @@ class FrontController extends CController {
             }
             $dataSP =   CommonDB::GetAll($queryTop,[]);
             if(count($dataSP)>0){
-                $spdautienid=$dataSP[0]["datasp"];
+               // var_dump($dataSP) ;exit();
+                $spdautienid=$dataSP[0]["san_pham_guid"];
             }
         }
 
@@ -40,7 +89,9 @@ class FrontController extends CController {
             $dataspshow = $this->getDetailSP($spdautienid);
             $noshow =0;
         }
-        $san_pham_loai_guid =$dataspshow["datasp"]["san_pham_loai_guid"];
+        $san_pham_loai_guid=$san_pham_loai_guid;
+        if(count($dataspshow)>0)
+        {$san_pham_loai_guid =$dataspshow["datasp"]["san_pham_loai_guid"];}
         $this->render('sanpham',  array('noshow'=>$noshow,'san_pham_loai_guid'=>$san_pham_loai_guid,'dataloaisp'=>$datasan_pham_loai_guid,'dataspshow'=>$dataspshow));
     }
     public function getDetailSP($guid_id){

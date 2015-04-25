@@ -65,7 +65,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
             </div>
             <div class="aside-right">
                 <span class="price-tag">Giá : <span id="spprice">... </span>đ</span>
-                <a class="btn-cart btn-simple mg-l-40" href="order.html"><i class="fa fa-caret-right"></i><span>đặt hàng</span></a>
+                <a class="btn-cart btn-simple mg-l-40" href="index.php?r=front/dathang&san_pham_guid=<?php echo $datasp["san_pham_guid"]?>"><i class="fa fa-caret-right"></i><span>đặt hàng</span></a>
             </div>
         </div>
         <div class="col-md-9 col-sm-8 col-xs-8 text-center">
@@ -73,7 +73,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                 <a class="width-100p" href="">  <img src="item_image/<?php echo $datasp["hinh_dai_dien"] ?>" id="hinhdaidien"  style="max-height: 300px"  alt=""></a>
             </div>
 
-            <a class="btn-cart btn-simple mg-t-15" href="product-detail.html"><i class="fa fa-caret-right"></i><span>xem chi tiết</span></a>
+            <a class="btn-cart btn-simple mg-t-15" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?>"><i class="fa fa-caret-right"></i><span>xem chi tiết</span></a>
         </div>
     </div>
 
@@ -90,7 +90,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                     <?php foreach($dataSPCungLoai as $value):?>
                         <div class=" funfact-item   text-center">
                             <a href=""><img src="item_image/icon_<?php echo $value["hinh_dai_dien"]?>" alt=""></a>
-                            <a class="detail" href="index.php?r=front/sanphamchitiet&guid=<?php echo $value["san_pham_guid"]?>"><span>chi tiết</span></a>
+                            <a class="detail" href="index.php?r=front/sanpham&guid=<?php echo $value["san_pham_guid"]?>"><span>chi tiết</span></a>
                         </div>
 
 
@@ -166,7 +166,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
 
         });
     }
-    AjaxGetColor(<?php echo $datamausp[0]['color_id'] ?> );
+    AjaxGetColor(<?php echo (isset($datamausp[0]['color_id'])?$datamausp[0]['color_id']:"0") ?> );
     $(document).on('click', '.rdSelect', function () {
         var sp_price= $('input:radio[name=radiosize]:checked').attr('sp_price');
         $('#spprice').html(sp_price);
