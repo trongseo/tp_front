@@ -71,7 +71,7 @@
                         <a class="dropdown-link">Menu</a>
                         <ul class="nav navbar-nav mobile-dropdown">
                             <li>
-                                <a href="index.php?r=first"><span class="underline">Giới Thiệu</span></a>
+                                <a href="index.php?r=front/intro"><span class="underline">Giới Thiệu</span></a>
                             </li>
                             <li class="" >
                                 <a href="index.php?r=front/sanpham"  ><span class="underline">Sản Phẩm</span></a>

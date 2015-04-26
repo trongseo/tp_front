@@ -62,20 +62,20 @@
 
             <div class="row">
                 <div class="col-md-12 menu-top">
-                    <a class="home" href="index.html"></a>
+                    <a class="home" href="index.php?r=first"></a>
                     <nav class="navbar navbar-new mobile-menu">
                         <a class="dropdown-link">Menu</a>
                         <ul class="nav navbar-nav mobile-dropdown">
-                            <li>
-                                <a href="index.php?r=first"><span class="underline">Giới Thiệu</span></a>
+                            <li class="intro" >
+                                <a href="index.php?r=front/intro"><span class="underline">Giới Thiệu</span></a>
                             </li>
-                            <li class="active" >
+                            <li class="sanpham" >
                                 <a href="index.php?r=front/sanpham"  ><span class="underline">Sản Phẩm</span></a>
                             </li>
-                            <li>
+                            <li class="support" >
                                 <a href="index.php?r=front/support"><span class="underline">Hỗ Trợ Kỹ Thuật</span></a>
                             </li>
-                            <li>
+                            <li class="contact">
                                 <a href="index.php?r=front/contact"><span class="underline">Liên Hệ</span></a>
                             </li>
                         </ul>
@@ -114,6 +114,8 @@
 <link href="themes/user-theme/css/jquery.bxslider.css" rel="stylesheet" />
 <script type="text/javascript" src="themes/user-theme/js/theme.js"></script>
 <script type="text/javascript" src="themes/user-theme/js/owl.carousel.js"></script>
-
+<script>
+    $('.<?php echo $this->activemenu ?>').addClass('active');
+</script>
 </body>
 </html>

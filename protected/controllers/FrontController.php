@@ -2,22 +2,58 @@
 Yii::app()->theme = 'user-theme';
 class FrontController extends CController {
 
-
+    public $activemenu;
     public function actionIntro() {
         $guid_id = '1';
         $data = CommonDB::GetDataRowKeyGuid("aaachung",'1');
         $this->pageTitle = $data["aaatitle"];
+        $this->activemenu="intro";
         $this->render('intro',  array('hsTable'=>$data));
     }
-    public function actionSanphamchitiet() {
+    public function actionContact() {
+        $this->activemenu="contact";
 
+        if( isset($_POST["btnsave"]) )
+        {
+            Yii::app()->theme = '';
+
+            $hsTable["lienhe_guid"]= Common::guid();
+            $hsTable["hoten"]=$_REQUEST["hoten"];
+            $hsTable["email"]=$_REQUEST["email"];
+            $hsTable["dienthoai"]=$_REQUEST["dienthoai"];
+            $hsTable["fax"]="";
+            $hsTable["diachi"]="";
+            $hsTable["tieude"]=$_REQUEST["tieude"];
+            $hsTable["noidung"]=$_REQUEST["noidung"];
+            $queryI="insert into lienhe(lienhe_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:lienhe_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
+            CommonDB::runSQL($queryI,$hsTable);
+
+            echo "ok";
+            return;
+
+        }
+        $this->pageTitle = "Liên hệ";
+
+        $this->render('contact',  array('dataspshow'=>""));
+    }
+    public function actionSupport() {
+
+
+        $data = CommonDB::GetAll("select aa.ma_sp,a.video_list_guid,a.san_pham_guid,a.text_embed,a.mo_ta,a.mo_ta_ngan from video_list a ,`san_pham` aa WHERE a.san_pham_guid=aa.san_pham_guid order by a.date_create desc",[]);
+        $this->pageTitle = "Hỗ trợ kỹ thuật";
+        $this->activemenu="support";
+        $this->render('support',  array('hsTable'=>$data));
+    }
+    public function actionSanphamchitiet() {
+        $this->activemenu="sanpham";
          $guid_id = Common::getPara("san_pham_guid");
         $datasan_pham_loai_guid =  CommonDB::GetAll(" SELECT * FROM san_pham_loai ORDER BY so_thu_tu",[]);
         $dataspshow = $this->getChiTiet($guid_id);
+        $this->pageTitle = "Chi tiết sản phẩm ";
         $this->render('sanphamdetail',  array('dataspshow'=>$dataspshow,'dataloaisp'=>$datasan_pham_loai_guid));
     }
     public function actionDathang() {
-
+        $this->activemenu="dathang";
         $guid_id = Common::getPara("san_pham_guid");
         if( isset($_POST["btnsave"]) )
         {
@@ -58,6 +94,7 @@ class FrontController extends CController {
         return array('datasp'=>$datasp,'dataHinh'=>$dataHinh);
     }
     public function actionSanPham() {
+        $this->activemenu="sanpham";
         $guid_id = '1';
         $san_pham_loai_guid="";
          $datasp=[];
@@ -167,6 +204,7 @@ class FrontController extends CController {
 
 
     public function actionDondathang() {
+        $this->activemenu="sanpham";
         $this->pageTitle = "Danh sách đơn đặt hàng";
         $query="Select hinh_dai_dien,ma_sp, dondathang_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung from dondathang,san_pham where dondathang.san_pham_guid=san_pham.san_pham_guid
           order by dondathang.date_create desc";

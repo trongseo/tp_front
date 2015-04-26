@@ -1,33 +1,38 @@
 
 <?php
 
-$datasp =$dataspshow['datasp'];
-$dataHinh = $dataspshow["dataHinh"];
-//array('datasp'=>$datasp,'datakichco'=>$datakichco,'datamausp'=>$datamausp);
-$san_pham_loai_guid= $datasp["san_pham_loai_guid"];
+
 ?>
-<form id="registration-form" method="post" onsubmit="return validateForm();" class="form-horizontal" action="index.php?r=front/dathang">
+<form id="registration-form" method="post" onsubmit="return validateForm();" class="form-horizontal" action="index.php?r=front/contact">
 
 
-<section class="intro">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <section class="support">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <h5 class="text-center"><strong>CÔNG TY TRÁCH NHIỆM HƯU HẠN TÂN PHÚC</strong></h5>
+                        <address class="text-center">
+                            <p>Giám đốc điều hành: Larry Page</p>
+                            <p><strong><abbr title="address">Trụ sở:</abbr></strong> Mountain View, CA, Hoa Kỳ</p>
+                            <p><strong><abbr title="phone">Điện thoại :</abbr></strong> 0123 456 789 - <strong><abbr title="atfaxtribute">Fax :</abbr></strong> 123 545 678</p>
+                            <p><strong><abbr title="attribute">Nhà sáng lập:</abbr></strong> Larry Page, Sergey Brin</p>
+                            <p><strong><abbr title="website">website :</abbr></strong> <a href="http://kinhtanphuc.com">kinhtanphucom</a></p>
 
-            <h3 class="title-page color-orange bd-b-green">
-                đặt hàng
-            </h3>
-           <div class="row">
-                <div class="col-smd-4">
-                    <h5 class="" style="display: inline"> <strong><?php echo $datasp["ten_loai"] ?> &gt; <?php echo $datasp["ma_sp"] ?></strong></h5>
+                        </address>
+                    </div>
                 </div>
 
-            </div>
-            <div class="form-group">
-                <div class="box-img">
-                    <img src="item_image/icon_<?php echo $datasp["hinh_dai_dien"] ?>" alt="">
+                <div class="video-block-detail">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.589757644037!2d106.61534400000001!3d10.8426738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a3226f9886b%3A0x19a5a86493286df0!2zQW4gU8awxqFuZywgUXXhuq1uIDEyLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1428598893597" width="100%" height="450" frameborder="0" style="border:0"></iframe>
                 </div>
-            </div>
-            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <h5 class="text-uppercase"><strong>vui lòng điền đầy đủ thông tin dưới đây</strong></h5>
+                        <p>(Để chúng tôi có thể liên lạc với quý khách, xin quý khách vui lòng cung cấp đúng thông tin số điện thoại và nội dugn. Xin cảm ơn quý khách.)</p>
+                    </div>
+                </div>
+
                 <form class="form-horizontal">
                     <div class="form-group">
                         <label for="hoten" class="col-sm-2 control-label">Họ tên</label>
@@ -50,7 +55,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                     <div class="form-group">
                         <label for="tieude" class="col-sm-2 control-label">Tiêu đề</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" value="Đặt mua :<?php echo $datasp["ten_loai"] ?> Mã:<?php echo $datasp["ma_sp"] ?>" id="tieude" name="tieude"  placeholder="Tiêu đề">
+                            <input type="text" class="form-control" value="" id="tieude" name="tieude"  placeholder="Tiêu đề">
                         </div> </div>
                     <div class="form-group">
                         <label for="noidung" class="col-sm-2 control-label">Nội dung</label>
@@ -67,10 +72,9 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                     </div>
                 </form>
             </div>
-        </div>
-
+    </section>
     </div>
-</section>
+    <!-- .container -->
 </form>
 
 <script>
