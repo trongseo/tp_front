@@ -52,7 +52,7 @@
     <script type="text/javascript" src="themes/user-theme/js/respond.min.js"></script>
     <![endif]-->
 <script>
-    var CUR_URL='http://localhost:1111/';
+    var CUR_URL='';
 </script>
 </head><body id=" " class="sub-page" >
 <div class="vd_body">

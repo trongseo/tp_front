@@ -247,6 +247,24 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
 
 
     }
+    public function actionCheckmasp() {
+
+        $san_pham_guid= Common::getPara("guid_id");
+        $ma_sp=$_REQUEST["ma_sp"];
+        $query="Select * from san_pham where ma_sp=:ma_sp and san_pham_guid<>'$san_pham_guid'";
+        if($san_pham_guid==""){
+            $query="Select * from san_pham where ma_sp=:ma_sp ";
+        }
+        $hsTable["ma_sp"]=$ma_sp;
+        $data = CommonDB::GetAll($query,$hsTable);
+        if(count($data)>0){
+            echo "0";
+            return;
+        }
+        echo "1";
+
+    }
+
     public function actionColorUpdateList() {
 
         Yii::app()->theme = 'admin-green';

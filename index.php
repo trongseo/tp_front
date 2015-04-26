@@ -2,8 +2,8 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/DB_CONFIG.php');
 set_include_path(implode(PATH_SEPARATOR, array(dirname(__FILE__) . '/framework', get_include_path(),)));
 $yii = 'framework/yii.php';
-//$mode = 'public';
-$mode = 'deve';
+$mode = 'public';
+//$mode = 'deve';
 
 if ($mode == 'public') {
     $config = dirname(__FILE__) . '/protected/config/public.php';

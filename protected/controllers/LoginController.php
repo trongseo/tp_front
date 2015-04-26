@@ -20,7 +20,7 @@ class LoginController extends CController {
                 Yii::app()->session['full_name'] = $arrInfo['full_name'];
                 if(Yii::app()->session['email']=='admin')
                 {
-                    $this->redirect(array('myadmin/index'));
+                    $this->redirect(array('myadmin/sanphamlist'));
                 }
             }
             return;

@@ -4,10 +4,10 @@ return CMap::mergeArray(
     array(
         'components' => array(
             'db' => array(
-                'connectionString' => 'mysql:host=192.168.0.100;dbname=quiz',
+                'connectionString' => 'mysql:host='.DB_HOST.';dbname='.DB_NAME,
                 'emulatePrepare' => true,
-                'username' => 'root',
-                'password' => '123456789',
+                'username' => DB_USERNAME,
+                'password' => DB_PASSWORD,
                 'charset' => 'utf8',
                 'schemaCachingDuration' => 60 * 60,
             ),
@@ -21,7 +21,7 @@ return CMap::mergeArray(
                 ),
             ),
         ),
-        'params' => array('listPerPage'=> 2,),
+        'params' => array('listPerPage'=> 20,),
     )
 
 );

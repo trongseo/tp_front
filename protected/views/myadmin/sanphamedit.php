@@ -112,6 +112,20 @@
             fr.readAsDataURL(src.files[0]);
         });
     }
+    function checkForm(){
+        if(MA_SP_valid==false){
+            alert("Mã sản phẩm đã tồn tại.Vui lòng nhập mã khác!");
+            $('#ma_sp').focus();
+            return false;
+        }
+//        $.get("index.php?r=ajaxadmin/checkmasp&ma_sp="+$(this).val() +"&guid_id="+guid_id, function (data, status) {
+//            if(data=="0"){
+//               return false;
+//            }
+//
+//        });
+        return true;
+    }
     var src = document.getElementById("uploaded_image");
     var target = document.getElementById("uploaded_image1");
     showImage(src,target);
@@ -128,6 +142,9 @@
                 $("#bar").width('0%');
                 $("#message").html("");
                 $("#percent").html("0%");
+            },
+            beforeSubmit: function () {
+                return checkForm();
             },
             uploadProgress: function(event, position, total, percentComplete)
             {
@@ -177,6 +194,22 @@ function listImage(){
     });
 
 }
+    var MA_SP_valid=true;
+    $( "#ma_sp" )
+        .focusout(function() {
+
+        })
+        .blur(function() {
+            guid_id=$('#san_pham_guid').val()+"";
+            $.get("index.php?r=ajaxadmin/checkmasp&ma_sp="+$(this).val() +"&guid_id="+guid_id, function (data, status) {
+                if(data=="0"){
+                  MA_SP_valid=false;
+                }else{
+                    MA_SP_valid=true;
+                }
+
+            });
+        });
     $( "#bsubmit" ).mouseover(function() {
         tinyMCE.triggerSave(false, true);
         varTitle = $('<textarea />').html( $("#mo_ta_dai").val()).text();
