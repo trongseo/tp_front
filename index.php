@@ -2,8 +2,8 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/DB_CONFIG.php');
 set_include_path(implode(PATH_SEPARATOR, array(dirname(__FILE__) . '/framework', get_include_path(),)));
 $yii = 'framework/yii.php';
-$mode = 'public';
-//$mode = 'deve';
+//$mode = 'public';
+$mode = 'deve';
 
 if ($mode == 'public') {
     $config = dirname(__FILE__) . '/protected/config/public.php';
@@ -18,5 +18,16 @@ Yii::createWebApplication($config)->run();
 require_once('counter/conn.php');
 require_once('counter/counter.php');
 $mypage = isset($_REQUEST["r"])?$_REQUEST["r"]:"default";
-updateCounter($mypage); // Updates page hits
-updateInfo(); // Updates hit info
+if( strpos( $mypage,"front")===false ){
+
+}else{
+    if( strpos( $mypage,"AjaxGetSize")===false ){
+        updateCounter($mypage); // Updates page hits
+        updateInfo(); // Updates hit info
+    }else{
+
+    }
+
+
+
+}

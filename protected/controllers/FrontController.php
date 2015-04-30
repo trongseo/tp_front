@@ -38,11 +38,38 @@ class FrontController extends CController {
     }
     public function actionSupport() {
 
+        $ma_sp="";
+        $query="select aa.ma_sp,a.video_list_guid,a.san_pham_guid,a.text_embed,a.mo_ta,a.mo_ta_ngan from video_list a ,`san_pham` aa WHERE a.san_pham_guid=aa.san_pham_guid order by a.date_create desc";
+        $data=[];
+        if( isset($_POST["btnsave"]) ){
+            $hsTable["ma_sp"]="%".$_REQUEST["ma_sp"]."%";
+            $ma_sp=$_REQUEST["ma_sp"];
+            $query="select aa.ma_sp,a.video_list_guid,a.san_pham_guid,a.text_embed,a.mo_ta,a.mo_ta_ngan
+             from video_list a ,`san_pham` aa WHERE a.san_pham_guid=aa.san_pham_guid and ma_sp like :ma_sp order by a.date_create desc";
 
-        $data = CommonDB::GetAll("select aa.ma_sp,a.video_list_guid,a.san_pham_guid,a.text_embed,a.mo_ta,a.mo_ta_ngan from video_list a ,`san_pham` aa WHERE a.san_pham_guid=aa.san_pham_guid order by a.date_create desc",[]);
+            $data = CommonDB::GetAll($query,$hsTable);
+        }else{
+            $data = CommonDB::GetAll($query,[]);
+        }
+
         $this->pageTitle = "Hỗ trợ kỹ thuật";
         $this->activemenu="support";
-        $this->render('support',  array('hsTable'=>$data));
+        $this->render('support',  array('hsTable'=>$data,'ma_sp'=>$ma_sp));
+    }
+    public function actionSupportDetail() {
+
+        $ma_sp="";
+        $data=[];
+        $hsTable["san_pham_guid"]="".$_REQUEST["guid"]."";
+
+        $query="select aa.ma_sp,a.video_list_guid,a.san_pham_guid,a.text_embed,a.mo_ta,a.mo_ta_ngan
+         from video_list a ,`san_pham` aa WHERE a.san_pham_guid=aa.san_pham_guid and a.san_pham_guid=:san_pham_guid order by a.date_create desc";
+      $data = CommonDB::GetAll($query,$hsTable);
+
+
+        $this->pageTitle = "Chi tiết hỗ trợ kỹ thuật";
+        $this->activemenu="support";
+        $this->render('supportdetail',  array('hsTable'=>$data[0],'ma_sp'=>$ma_sp));
     }
     public function actionSanphamchitiet() {
         $this->activemenu="sanpham";
@@ -95,6 +122,7 @@ class FrontController extends CController {
     }
     public function actionSanPham() {
         $this->activemenu="sanpham";
+
         $guid_id = '1';
         $san_pham_loai_guid="";
          $datasp=[];
@@ -102,19 +130,18 @@ class FrontController extends CController {
         if($spdautienid==""){
             //san pham nay co bao nhieu mau
             $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid=(
-                        SELECT san_pham_loai_guid FROM san_pham_loai ORDER BY so_thu_tu LIMIT 1 ) ORDER BY date_create ";
+                        SELECT san_pham_loai_guid FROM san_pham_loai ORDER BY so_thu_tu LIMIT 1 ) ORDER BY date_update desc ";
             $san_pham_loai_guid = Common::getPara("san_pham_loai_guid");
             if( $san_pham_loai_guid!=""){
-                $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid='$san_pham_loai_guid' ORDER BY date_create limit 1 ";
+                $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid='$san_pham_loai_guid' ORDER BY date_update desc limit 1 ";
             }
+            //var_dump($queryTop);
             $dataSP =   CommonDB::GetAll($queryTop,[]);
             if(count($dataSP)>0){
                // var_dump($dataSP) ;exit();
                 $spdautienid=$dataSP[0]["san_pham_guid"];
             }
         }
-
-
 
         $datasan_pham_loai_guid =  CommonDB::GetAll(" SELECT * FROM san_pham_loai ORDER BY so_thu_tu",[]);
         //$spdautienid='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF';//$datasp[0]["san_pham_guid"];
@@ -126,6 +153,7 @@ class FrontController extends CController {
             $dataspshow = $this->getDetailSP($spdautienid);
             $noshow =0;
         }
+        $this->pageTitle = "Sản phẩm ";
         $san_pham_loai_guid=$san_pham_loai_guid;
         if(count($dataspshow)>0)
         {$san_pham_loai_guid =$dataspshow["datasp"]["san_pham_loai_guid"];}

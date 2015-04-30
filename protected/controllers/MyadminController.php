@@ -1,6 +1,6 @@
 <?php
 Yii::app()->theme = 'admin-green';
-class MyadminController extends CController {
+class MyadminController extends UsersController{
 
 
     public function actionIndex() {
@@ -41,6 +41,62 @@ class MyadminController extends CController {
         $this->pageTitle = "Cập nhật sản phẩm ";
        $datasan_pham_loai_guid = CommonDB::GetAll("Select * from san_pham_loai ",[]);
         $this->render('sanphamedit',array('hsTable'=>$hsTable,'datasan_pham_loai_guid'=>$datasan_pham_loai_guid));
+    }
+    public function actionIpList() {
+
+        $this->pageTitle = 'Danh sách Ip';
+        $hsSearch["date_to"]= date('Y-m-d', time());;
+        $hsSearch["date_from"] =  date('Y-m-d', time());;
+
+/////////
+
+        $this->render('iplist',array('hsSearch'=>$hsSearch));
+
+
+
+
+    }
+    public function actionAjaxIpList() {
+        Yii::app()->theme = '';
+        $this->pageTitle = 'Danh sách Ip';
+        $hsSearch["date_to"]= date('Y-m-d', time());;
+        $hsSearch["date_from"] =  date('Y-m-d', time());;
+   $dateFrom = Common::getPara("date_from");
+        $dateTo= Common::getPara("date_to");
+        if($dateFrom!=""){
+            $hsSearch["date_to"]= $dateTo;
+            $hsSearch["date_from"] =  $dateFrom;
+        }
+/////////
+        $hsTable["ma_sp"]="";
+        //$orderBy = $this->getOrderBy($order,$direction);
+        $page = (isset($_GET['page']) ? $_GET['page'] : 1);  // define the variable to “LIMIT” the query
+        $tblName  = 'hits_table_info';
+        $query1 = Yii::app()->db->createCommand() //this query contains all the data
+            ->select(array('*'))
+            ->from(array($tblName))
+            // ->where('t1.id_question_type = '.$question_type_id.' AND t2.id = t1.id_question_type ')
+            ->where(' 1=1 and time_accessed >=:date_from and time_accessed<=:date_to' ,array(':date_from'=>$hsSearch["date_from"],':date_to'=>$hsSearch["date_to"].'  23:59:59'))
+            ->order('time_accessed desc ')
+            ->limit(Yii::app()->params['listPerPage'], ($page-1) * Yii::app()->params['listPerPage']) ;// the trick is here!
+
+        //echo $query1->getText().'<br/>';
+        $dataq = $query1->queryAll();
+        $item_count = Yii::app()->db->createCommand() // this query get the total number of items,
+            ->select('count(id) as count')
+            ->from(array($tblName))
+            ->where(' 1=1 and time_accessed >=:date_from and time_accessed<=:date_to' ,array(':date_from'=>$hsSearch["date_from"],':date_to'=>$hsSearch["date_to"].'  23:59:59'))
+            ->queryScalar(); // do not LIMIT it, this must count all items!
+
+
+        $pages = new CPagination($item_count);
+        $pages->pageSize = Yii::app()->params['listPerPage'];
+        $dataSearch = array('models' =>$dataq, 'pages' => $pages, 'itemCount'=>$item_count,'pageSize'=>Yii::app()->params['listPerPage']);
+        $this->render('ajaxiplist',array('hsTable'=>$hsTable,'data'=>$dataq,'dataSearch'=>$dataSearch,'hsSearch'=>$hsSearch));
+
+
+
+
     }
     public function actionSanPhamList() {
 

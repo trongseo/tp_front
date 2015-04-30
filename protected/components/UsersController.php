@@ -1,7 +1,7 @@
 <?php
 
 class UsersController extends CController {
-    public $layout = '//layouts/column1';
+
 
     public $menu = array();
 

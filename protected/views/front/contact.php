@@ -11,7 +11,7 @@
             <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
                 <div class="form-group">
                     <div class="col-md-12">
-                        <h5 class="text-center"><strong>CÔNG TY TRÁCH NHIỆM HƯU HẠN TÂN PHÚC</strong></h5>
+                        <h5 class="text-center"><strong>CÔNG TY TRÁCH NHIỆM HỮU HẠN TÂN PHÚC</strong></h5>
                         <address class="text-center">
                             <p>Giám đốc điều hành: Larry Page</p>
                             <p><strong><abbr title="address">Trụ sở:</abbr></strong> Mountain View, CA, Hoa Kỳ</p>
@@ -29,7 +29,7 @@
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <h5 class="text-uppercase"><strong>vui lòng điền đầy đủ thông tin dưới đây</strong></h5>
-                        <p>(Để chúng tôi có thể liên lạc với quý khách, xin quý khách vui lòng cung cấp đúng thông tin số điện thoại và nội dugn. Xin cảm ơn quý khách.)</p>
+                        <p>(Để chúng tôi có thể liên lạc với quý khách, xin quý khách vui lòng cung cấp đúng thông tin số điện thoại và nội dung. Xin cảm ơn quý khách.)</p>
                     </div>
                 </div>
 

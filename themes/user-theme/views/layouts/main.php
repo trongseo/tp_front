@@ -96,6 +96,7 @@
 
     <!-- Footer Start -->
     <footer class="footer"  id="footer">
+        <div align="center"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3188478&c=9565747"></a></div>
         <p class="text-center param-underbanner">Copyright@2015 <a href="http://kinhtanphuc.com" ><span class="underline">kinhtanphuc.com</span></a></p>
     </footer>
     <!-- Footer END -->

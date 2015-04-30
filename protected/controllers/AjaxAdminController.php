@@ -17,7 +17,7 @@ class AjaxadminController extends CController {
 
         // Check for errors
         if($_FILES[$ctrName]['error'] > 0){
-            return "Lỗi upload.";
+            return "Lỗi upload.> 2MB";
         }
 
         if(!getimagesize($_FILES[$ctrName]['tmp_name'])){
@@ -131,13 +131,13 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             }
 
             $guid_id=$_REQUEST["san_pham_guid"];
-            $queryIn ="Update  san_pham set ma_sp=:ma_sp,san_pham_loai_guid=:san_pham_loai_guid,mo_ta_dai=:mo_ta_dai where san_pham_guid=:san_pham_guid";
+            $queryIn ="Update  san_pham set date_update=now(), ma_sp=:ma_sp,san_pham_loai_guid=:san_pham_loai_guid,mo_ta_dai=:mo_ta_dai where san_pham_guid=:san_pham_guid";
             $hsTable="";
             if($guid_id==""){
                 $hsTable["mo_ta_ngan"]="" ; $hsTable["ten_sp"]="" ;
                 $guid_id = Common::guid();
-                $queryIn="insert into san_pham(san_pham_guid,ma_sp,ten_sp,san_pham_loai_guid,mo_ta_ngan,mo_ta_dai)
-                    values(:san_pham_guid,:ma_sp,:ten_sp,:san_pham_loai_guid,:mo_ta_ngan,:mo_ta_dai)";
+                $queryIn="insert into san_pham(date_update,san_pham_guid,ma_sp,ten_sp,san_pham_loai_guid,mo_ta_ngan,mo_ta_dai)
+                    values(now(),:san_pham_guid,:ma_sp,:ten_sp,:san_pham_loai_guid,:mo_ta_ngan,:mo_ta_dai)";
             }
             $ma_sp=$_REQUEST["ma_sp"];
 

@@ -108,11 +108,30 @@
         // when image is loaded, set the src of the image where you want to display it
         fr.onload = function(e) { target.src = this.result; };
         src.addEventListener("change",function() {
-            // fill fr with image data
-            fr.readAsDataURL(src.files[0]);
+            var f = src.files[0];
+
+            //here I CHECK if the FILE SIZE is bigger than 8 MB (numbers below are in bytes)
+            if (f.size > 2000000 || f.fileSize > 2000000)
+            {
+                //show an alert to the user
+                alert("Vui lòng upload File nhỏ hơn < 2 MB)")
+
+                //reset file upload control
+                target.src = null;
+            }else{
+                // fill fr with image data
+                fr.readAsDataURL(src.files[0]);
+            }
+
+
         });
     }
     function checkForm(){
+        if( $('#ma_sp').val()==""){
+            alert("Mã sản phẩm chưa nhập.Vui lòng nhập mã!");
+            $('#ma_sp').focus();
+            return false;
+        }
         if(MA_SP_valid==false){
             alert("Mã sản phẩm đã tồn tại.Vui lòng nhập mã khác!");
             $('#ma_sp').focus();
@@ -161,6 +180,8 @@
                // $("#myForm").reset();
                //document.getElementById("myForm").reset();
                 alert("Đã lưu thành công");
+                $("#myForm")[0].reset();
+                $("#uploaded_image1").prop('src','');
 
             },
             complete: function(response)
@@ -184,6 +205,8 @@
     $( "#color_id" ).change(function() {
        // listImage();
     });
+
+
 function listImage(){
     $('#divlist').html('loading...');
     guid_id=$('#san_pham_guid').val();

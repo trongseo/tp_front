@@ -10,6 +10,7 @@ return array(
     'defaultController' => 'first',
    // 'theme' => 'admin-green',
     'theme' => 'admin-template',
+    'timeZone' => 'Asia/Ho_Chi_Minh',
     // preloading 'log' component
     'preload' => array('log'),
     // autoloading model and component classes

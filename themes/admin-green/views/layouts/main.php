@@ -146,7 +146,7 @@
                             </a></li>
 
                         <li>
-                            <a href="index.php?r=adminchung/iplist">
+                            <a href="index.php?r=myadmin/iplist">
                                 <i class="fa "></i> <span>Danh sách Ip vào web </span>
                                 <small class="badge pull-right bg-green"></small>
                             </a></li>

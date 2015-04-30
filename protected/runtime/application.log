@@ -1,20 +1,142 @@
-2015/04/26 18:30:23 [error] [php] Undefined index: san_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:136)
+2015/04/29 10:08:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iplist".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('iplist')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('iplist')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('adminchung/ipli...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=adminchung/iplist
+HTTP_REFERER=http://localhost:1111/index.php?r=myadmin/sanphamlist
+---
+2015/04/29 10:08:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iplist".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('iplist')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('iplist')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('adminchung/ipli...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=adminchung/iplist
+HTTP_REFERER=http://localhost:1111/index.php?r=myadmin/sanphamlist
+---
+2015/04/29 10:08:57 [error] [php] Undefined variable: hsSearch (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\myadmin\iplist.php:28)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): MyadminController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): MyadminController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php(75): MyadminController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): MyadminController->actionIpList()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=myadmin/iplist
+2015/04/29 10:09:33 [error] [php] Undefined index: san_pham_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\myadmin\iplist.php:56)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(869): MyadminController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(782): MyadminController->renderPartial()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php(75): MyadminController->render()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): MyadminController->actionIpList()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=myadmin/iplist
+2015/04/29 10:39:58 [error] [php] date() expects at least 1 parameter, 0 given (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php:48)
 Stack trace:
 #0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
-#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
-#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
-#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
 #4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
 #5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
 #6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
-REQUEST_URI=/index.php?r=front/sanpham&guid=621C4803_5074_EAFE_43F5_C7F2CEF32FFA8854
-2015/04/26 18:32:23 [error] [php] Undefined index: san_pham_loai_guid (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\FrontController.php:136)
+REQUEST_URI=/index.php?r=myadmin/iplist&page=4
+2015/04/29 10:41:39 [error] [php] date() expects at least 1 parameter, 0 given (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php:48)
 Stack trace:
 #0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
-#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): FrontController->runAction()
-#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): FrontController->runActionWithFilters()
-#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): FrontController->run()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
 #4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
 #5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
 #6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
-REQUEST_URI=/index.php?r=front/sanpham&guid=3800BD26_EB8A_0DC9_0BD0_393B512CDA9Ds555
+REQUEST_URI=/index.php?r=myadmin/iplist&page=4
+2015/04/29 10:41:43 [error] [php] date() expects at least 1 parameter, 0 given (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php:48)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=myadmin/iplist
+2015/04/29 16:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iplist".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('iplist')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('iplist')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('adminchung/ipli...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=adminchung/iplist
+HTTP_REFERER=http://localhost:1111/index.php?r=myadminvideo/videolist
+---
+2015/04/29 16:57:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iplist".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('iplist')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('iplist')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('adminchung/ipli...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=adminchung/iplist
+HTTP_REFERER=http://localhost:1111/index.php?r=myadminvideo/videolist
+---
+2015/04/29 16:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "iplist".' in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php:483
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(270): CController->missingAction('iplist')
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): CController->run('iplist')
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController('adminchung/ipli...')
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=adminchung/iplist
+HTTP_REFERER=http://localhost:1111/index.php?r=myadminvideo/videolist
+---
+2015/04/30 10:15:54 [error] [php] Undefined index: default (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\layouts\column1.php:4)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(784): MyadminController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php(95): MyadminController->render()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): MyadminController->actionAjaxIpList()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=myadmin/ajaxiplist
+2015/04/30 10:16:39 [error] [php] Undefined index: default (D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\layouts\column1.php:4)
+Stack trace:
+#0 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(784): MyadminController->renderFile()
+#1 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php(95): MyadminController->render()
+#2 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\actions\CInlineAction.php(49): MyadminController->actionAjaxIpList()
+#3 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(286): MyadminController->runAction()
+#5 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CController.php(265): MyadminController->runActionWithFilters()
+#6 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(282): MyadminController->run()
+#7 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php(17): CWebApplication->run()
+REQUEST_URI=/index.php?r=myadmin/ajaxiplist
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\views\layouts\column1.php (4)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\protected\controllers\MyadminController.php (95)
+in D:\project\aPhungTanPhucglass\1SOURCE\src_tp_front\tp_front\index.php (17)
