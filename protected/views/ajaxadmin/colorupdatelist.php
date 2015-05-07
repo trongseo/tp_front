@@ -16,6 +16,8 @@
         <tbody><tr>
             <th style="width: 10px">#</th>
             <th>Tên</th>
+			 <th>Icon</th>
+            <th>Thứ tự</th>
             <th>Xóa</th>
 
         </tr>
@@ -24,8 +26,15 @@
 
             <tr class="remove<?php echo $value["color_id"]?>">
                 <td> <?php echo $numst++; ?></td>
-                <td><input type="text" value="<?php echo $value["color_name"]?>" id="color_name_<?php echo $value["color_id"]?>" name="color_name_<?php echo $value["color_id"]?>" />
+                <td>
+       <input type="text" value="<?php echo $value["color_name"]?>" id="color_name_<?php echo $value["color_id"]?>" name="color_name_<?php echo $value["color_id"]?>" />
                     </td>
+					<td>
+                    <input type="file"   id="image1_<?php echo $value["color_id"]?>"  name="image1_<?php echo $value["color_id"]?>"  />
+                        <img src='/item_image/<?php echo $value["image1"]?>'/>
+                </td>
+                <td><input type="text" value="<?php echo $value["stt"]?>" id="so_thu_tu_<?php echo $value["color_id"]?>" name="so_thu_tu_<?php echo $value["color_id"]?>" />
+                </td>
                 <td>
                     <button class="btn btn-info btn-sm cssdelete"  color_id="<?php echo $value["color_id"]?>" type="button" >Xóa</button>
                 </td>
@@ -45,7 +54,7 @@
     </div>
     </div>
 </section>
-<script src="http://120.72.106.146:66/themes/user-templete/js/jquery.min.js"></script>
+<!--<script src="http://120.72.106.146:66/themes/user-templete/js/jquery.min.js"></script>-->
 <script>
     $(document).ready(function()
     {

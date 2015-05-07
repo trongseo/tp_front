@@ -306,6 +306,66 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
                 }
             }
         }
+
+        $i=0;
+        $list =[];
+        $forbiddenword1 = 'so_thu_tu_';
+        foreach($_POST as $key=>$value)
+        {
+            if(preg_match("/$forbiddenword1/i", $key)){
+                $guid_id = substr($key,strlen ($forbiddenword1));
+                if (!in_array($guid_id, $list)){
+                    $list[$i]=$guid_id;
+                    $i++;
+                    $query="update m_color set stt=:stt where color_id=:color_id";
+                    $hs1["stt"]=$_REQUEST["so_thu_tu_".$guid_id];
+                    $hs1["color_id"]=$guid_id;
+                    CommonDB::runSQL($query,$hs1);
+                }
+            }
+
+        }
+        //upload hinh
+
+        if(!defined("image_folder")){
+            define("image_folder","item_image/");
+        }
+        $i=0;
+        $list =[];
+        $forbiddenword1 = 'image1_';
+        foreach($_FILES as $key=>$value){
+            if(preg_match("/$forbiddenword1/i", $key)){
+                $guid_id = substr($key,strlen ($forbiddenword1));
+                if (!in_array($guid_id, $list)){
+                    $list[$i]=$guid_id;
+                    $i++;
+                    $fileName=$_REQUEST["so_thu_tu_".$guid_id];
+                    $this->uploadIcon("image1_".$guid_id,$guid_id);
+                }
+            }
+        }
+
+
+
+    }
+    public  function  uploadIcon($uploaded_image,$guid_id){
+
+        if( isset($_FILES[$uploaded_image]["name"]) && ($_FILES[$uploaded_image]["name"]!="")  ){
+
+            $image = new SimpleImage();
+            $image->load($_FILES[$uploaded_image]['tmp_name']);
+            $imageName ='color_'.$guid_id.date('m_d_Y_hisa').'.jpg';
+            $imageNameicon_="color_icon_".$imageName;
+
+            $image->save(image_folder.$imageName);
+
+            $image->resize(20,20);
+            $image->save(image_folder.$imageNameicon_);
+            $query="update m_color set image1=:image1 where color_id=:color_id";
+            $hs1["image1"]=$imageName;
+            $hs1["color_id"]=$guid_id;
+            CommonDB::runSQL($query,$hs1);
+        }
     }
 	public function actionSizeList() {
 

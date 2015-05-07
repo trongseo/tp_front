@@ -13,7 +13,12 @@ $db_user = "INSERT_DB_USERNAME_HERE";
 $db_pw = "INSERT_DB_PASSWORD_HERE";
  * Time: 5:16 PM
  */
-define("DB_HOST","chuyennhat.vn");
+//define("DB_HOST","chuyennhat.vn");
+//define("DB_NAME","test_glass1");
+//define("DB_USERNAME","test_glass1");
+//define("DB_PASSWORD","123456789");
+
+define("DB_HOST","localhost");
 define("DB_NAME","test_glass1");
-define("DB_USERNAME","test_glass1");
-define("DB_PASSWORD","123456789");
+define("DB_USERNAME","root");
+define("DB_PASSWORD","");

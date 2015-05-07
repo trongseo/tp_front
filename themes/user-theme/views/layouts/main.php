@@ -39,7 +39,7 @@
 
     <link href="themes/user-theme/css/theme.css" rel="stylesheet" type="text/css">
 
-
+    <script src="themes/jquery.min.js"></script>
 
     <!-- Head SCRIPTS -->
     <script type="text/javascript" src="themes/user-theme/js/modernizr.js"></script>

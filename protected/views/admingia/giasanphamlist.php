@@ -28,7 +28,7 @@
 
         </tbody></table>
 </div>
-<script src="http://120.72.106.146:66/themes/user-templete/js/jquery.min.js"></script>
+<!--<script src="http://120.72.106.146:66/themes/user-templete/js/jquery.min.js"></script>-->
 <script>
 $(document).on('click', '.cssdelete', function () {
     guid_id = $(this).attr("guid_id");
