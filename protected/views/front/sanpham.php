@@ -42,12 +42,15 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                 <h5><i class="fa fa-caret-right append-icon"></i>Màu sắc</h5>
                 <ul class="list-color">
                     <?php foreach($datamausp as $value):?>
-                        <li>
-                            <div class="<?php echo $value["csscolor"]?>"></div>
-									<span class="underline color_id" color_id='<?php echo $value["color_id"]?>' >
-									<?php echo $value["color_name"]?>
-									</span>
-                        </li>
+					
+					
+					<li>
+         <div class="box-color"><img src="item_image/<?php echo $value["image1"]?>"></div>
+         <span class="underline color_id" color_id='<?php echo $value["color_id"]?>'>
+          <?php echo $value["color_name"]?>
+         </span>
+        </li>
+                        
 
 
                     <?php endforeach?>

@@ -157,20 +157,38 @@
                             </a></li>
                     </ul>
                 </li>
-              
-                
+
                 <li>
-                    <a href="index.php?r=ajaxadmin/colorupdatelist">
-                        <i class="fa fa-thaa"></i> <span>Danh mục màu sản phẩm</span>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-th"></i> <span>Cấu hình hệ thống web</span>
                         <small class="badge pull-right bg-green"></small>
-                    </a>
+                    </a> <ul>
+                        <li>
+                            <a href="index.php?r=myadmin/hinhtrangchu">
+                                <i class="fa fa-thaa"></i> <span>Hình trang chủ</span>
+                                <small class="badge pull-right bg-green"></small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php?r=ajaxadmin/colorupdatelist">
+                                <i class="fa fa-thaa"></i> <span>Danh mục màu sản phẩm</span>
+                                <small class="badge pull-right bg-green"></small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php?r=ajaxadmin/sizelist">
+                                <i class="fa fa-thaa"></i> <span>Danh mục kích cỡ</span>
+                                <small class="badge pull-right bg-green"></small>
+                            </a>
+                        </li>
+
+
+
+
+                    </ul>
+
                 </li>
-                <li>
-                    <a href="index.php?r=ajaxadmin/sizelist">
-                        <i class="fa fa-thaa"></i> <span>Danh mục kích cỡ</span>
-                        <small class="badge pull-right bg-green"></small>
-                    </a>
-                </li>
+
                 <!--<li class="treeview">
                    <a href="#">
                        <i class="fa fa-folder"></i> <span>Examples</span>

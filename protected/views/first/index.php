@@ -95,16 +95,20 @@
                 <div class="col-md-8 col-sm-12">
                     <div class="slider-wrapper theme-default">
                         <div id="slider" class="nivoSlider">
-                            <img src="themes/user-theme/images/banner02.png" data-thumb="themes/user-theme/banner02.png" alt="" />
-                            <img src="themes/user-theme/images/banner01.png" data-thumb="themes/user-theme/banner01.png" alt="" title="" />
-                            <img src="themes/user-theme/images/banner03.png" data-thumb="themes/user-theme/banner03.png" alt="" data-transition="slideInLeft" />
-                            <img src="themes/user-theme/images/banner04.png" data-thumb="themes/user-theme/banner04.png" alt="" title="" />
+                            <?php foreach($data as $value):?>
+
+ <img src="item_image/trangchu/<?php echo $value["image1"]?>" data-thumb="item_image/trangchu/<?php echo $value["image1"]?>" alt="" title="" />
+
+                            <?php endforeach?>
+
+<!--      <img src="themes/user-theme/images/banner03.png" data-thumb="themes/user-theme/banner03.png" alt="" data-transition="slideInLeft" />-->
+
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="img_banner">
-                        <img src="themes/user-theme/images/banner-r.png" alt="" />
+                        <img src="item_image/trangchu/<?php echo $imgRight ?> " alt="" />
                     </div>
                 </div>
             </div>
