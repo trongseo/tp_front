@@ -20,6 +20,9 @@
     .color_active{
         background-color: #ffff00;
     }
+    .box-img{
+        overflow: hidden;height: 300px;
+    }
 </style>
 
 <?php if(($noshow=="0")):?>
