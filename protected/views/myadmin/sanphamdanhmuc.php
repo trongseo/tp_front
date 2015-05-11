@@ -18,7 +18,7 @@
                                 <th>Mô tả</th>
                                 <th>Số TT</th>
                                 <th>Xóa</th>
-
+								<th>Hiện/Ẩn</th>
                             </tr>
                             <?php $numst=1; ?>
                             <?php foreach($data as $value):?>
@@ -32,7 +32,9 @@
                                     <td>
                                         <button class="btn btn-info btn-sm cssdelete"  san_pham_loai_guid="<?php echo $value["san_pham_loai_guid"]?>" type="button" >Xóa</button>
                                     </td>
-
+ <td>
+                                        <input  id="chkisshow_<?php echo $value["san_pham_loai_guid"]?>"  name="chkisshow_<?php echo $value["san_pham_loai_guid"]?>" class="" san_pham_loai_guid="<?php echo $value["san_pham_loai_guid"]?>"  <?php echo $value["isshow"]=="1"?"checked":"" ?> type="checkbox" />
+                                    </td>
                                 </tr>
 
                             <?php endforeach?>

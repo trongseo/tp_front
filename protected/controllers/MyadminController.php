@@ -207,9 +207,12 @@ class MyadminController extends UsersController{
         }
         $query="Select * from san_pham_loai order by so_thu_tu ";
         $data = CommonDB::GetAll($query,[]);
+        //var_dump($data);exit();
         $this->render('sanphamdanhmuc',array('data'=>$data));
     }
     public function SanphamdanhmucUpdate() {
+       // var_dump($_POST);exit();
+       $this->updateIsShow();
         $i=0;
         $list =[];
         $forbiddenword = 'ten_loai_';
@@ -246,6 +249,35 @@ class MyadminController extends UsersController{
             }
 
         }
+
+    }
+    public  function  updateIsShow(){
+        $i=0;
+        $list =[];
+        $forbiddenword = 'chkisshow_';
+        $listguid ="'00'";
+        foreach($_POST as $key=>$value)
+        {
+            if(preg_match("/$forbiddenword/i", $key)){
+                $guid_id = substr($key,strlen ($forbiddenword));
+                if (!in_array($guid_id, $list)){
+                    $list[$i]=$guid_id;
+                    $i++;
+                    $listguid.=",'".$guid_id."'";
+
+                }
+            }
+
+        }
+
+          $query="update san_pham_loai set isshow=1 where san_pham_loai_guid in (".$listguid.")";
+                   // $hs["ten_loai"]=$_REQUEST["ten_loai_".$guid_id];
+                   // $hs["san_pham_loai_guid"]=$guid_id;
+                    CommonDB::runSQL($query,[]);
+        $query="update san_pham_loai set isshow=0 where san_pham_loai_guid not in (".$listguid.")";
+        // $hs["ten_loai"]=$_REQUEST["ten_loai_".$guid_id];
+        // $hs["san_pham_loai_guid"]=$guid_id;
+        CommonDB::runSQL($query,[]);
 
     }
     public function actionDanhMucDelete() {

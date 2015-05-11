@@ -11,7 +11,7 @@
 
 </section>
 
-<script src="http://malsup.github.com/jquery.form.js"></script>
+
 <form id="myForm" action="index.php?r=myadmin/sanphamlist" method="post" enctype="multipart/form-data">
     <section class="content  bordertop">
         <div class="row">
@@ -62,7 +62,7 @@
                                 <tbody><tr>
                                     <th style="width: 10px">#</th>
                                     <th>Sản phẩm</th>
-                                    <th>Xóa</th>
+                                    <th>Action</th>
 
                                 </tr>
                                 <?php $numst=1; ?>
@@ -80,7 +80,9 @@
                                             <a href="index.php?r=myadminvideo/videoedit&guid=<?php echo $value["san_pham_guid"]?>" class="btn btn-info btn-sm" >Thêm video kỹ thuật</a>
                                             <a href="index.php?r=admingia/giasanpham&san_pham_guid=<?php echo $value["san_pham_guid"]?>" class="btn btn-info btn-sm" >Cập nhật giá</a>
 
-                                        </td>
+                                       <label   >Hiện ưu tiên
+                            <input   type="radio" id="rd_isshowhome_<?php echo $value["san_pham_guid"]?>" <?php echo $value["isshowhome"]=="1"?"checked":"" ?> name="rd_isshowhome"  value="<?php echo $value["san_pham_guid"]?>"/>
+                                       </label>  </td>
 
                                     </tr>
 
@@ -127,6 +129,19 @@ $(document).on('click', '.cssfind', function () {
     window.location.href='index.php?r=myadmin/sanphamlist&ma_sp='+ma_sp;
 
 });
+$(document).on('change', 'input[name="rd_isshowhome"]', function () {
+ var guidsp = $(this).val();
+//myadminvideo/videoedit&san_pham_guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF
+
+    $.get("index.php?r=ajaxadmin/updateisshowhome&guid_id="+guidsp +"&imagename=", function (data, status) {
+
+        alert("Đã cập nhật ưu tiên!");
+    });
+
+});
+
+
+
 $(document).on('click', '.cssedit', function () {
     guid_id = $(this).attr("guid_id");
 //myadminvideo/videoedit&san_pham_guid=45D2ACE6-D24E-CB65-149C-7A32C24BB3EF

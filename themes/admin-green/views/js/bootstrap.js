@@ -229,6 +229,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
         else
           $parent.find('.active').removeClass('active')
       }
+       debugger;
       if (changed) $input.prop('checked', !this.$element.hasClass('active')).trigger('change')
     }
 

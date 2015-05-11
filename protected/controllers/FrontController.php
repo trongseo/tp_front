@@ -34,7 +34,8 @@ class FrontController extends CController {
         }
         $this->pageTitle = "Liên hệ";
 
-        $this->render('contact',  array('dataspshow'=>""));
+        $data = CommonDB::GetDataRowKeyGuid("aaachung",'3');
+        $this->render('contact',   array('hsTable'=>$data));
     }
     public function actionSupport() {
 
@@ -130,10 +131,11 @@ class FrontController extends CController {
         if($spdautienid==""){
             //san pham nay co bao nhieu mau
             $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid=(
-                        SELECT san_pham_loai_guid FROM san_pham_loai ORDER BY so_thu_tu LIMIT 1 ) ORDER BY date_update desc ";
+                        SELECT san_pham_loai_guid FROM san_pham_loai ORDER BY so_thu_tu LIMIT 1 ) and isshowhome=1 ORDER BY date_update desc ";
+
             $san_pham_loai_guid = Common::getPara("san_pham_loai_guid");
             if( $san_pham_loai_guid!=""){
-                $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid='$san_pham_loai_guid' ORDER BY date_update desc limit 1 ";
+                $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid='$san_pham_loai_guid' and isshowhome=1 ORDER BY date_update desc limit 1 ";
             }
             //var_dump($queryTop);
             $dataSP =   CommonDB::GetAll($queryTop,[]);
@@ -143,7 +145,7 @@ class FrontController extends CController {
             }
         }
 
-        $datasan_pham_loai_guid =  CommonDB::GetAll(" SELECT * FROM san_pham_loai ORDER BY so_thu_tu",[]);
+        $datasan_pham_loai_guid =  CommonDB::GetAll(" SELECT * FROM san_pham_loai where isshow=1 ORDER BY so_thu_tu",[]);
         //$spdautienid='45D2ACE6-D24E-CB65-149C-7A32C24BB3EF';//$datasp[0]["san_pham_guid"];
 
       // var_dump($spdautienid ); exit();

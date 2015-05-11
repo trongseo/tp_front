@@ -1,6 +1,6 @@
 <?php
 Yii::app()->theme = '';
-class AjaxadminController extends CController {
+class AjaxadminController extends UsersController {
 
 
     public function actionIndex() {
@@ -27,6 +27,19 @@ class AjaxadminController extends CController {
         return "";
 
     }
+
+    public function actionUpdateisshowhome() {
+        $guid_id=$_REQUEST["guid_id"];
+        $queryGuid="Select * from san_pham wherer san_pham_guid='".$guid_id."' ";
+        $dataR = CommonDB::GetDataRowKeyGuid("san_pham",$guid_id);
+       $san_pham_loai_guid = $dataR["san_pham_loai_guid"];
+        $query = "update  san_pham set isshowhome=0 where san_pham_loai_guid='".$san_pham_loai_guid."' ";
+        CommonDB::runSQL($query,[]);
+        $query = "update  san_pham set isshowhome=1 where san_pham_guid='".$guid_id."' ";
+        CommonDB::runSQL($query,[]);
+        echo "ok";
+    }
+
     public function actionUploadImage() {
 
         if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image"]["name"]) && ($_FILES["uploaded_image"]["name"]!="") ) {

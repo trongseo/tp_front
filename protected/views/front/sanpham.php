@@ -21,7 +21,7 @@
         background-color: #ffff00;
     }
     .box-img{
-        overflow: hidden;height: 300px;
+        overflow: hidden;height: 300px;padding-top:3px;
     }
 </style>
 
@@ -75,8 +75,9 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
             </div>
         </div>
         <div class="col-md-9 col-sm-8 col-xs-8 text-center">
+		
             <div class="box-img">
-                <a class="width-100p" href="">  <img src="item_image/<?php echo $datasp["hinh_dai_dien"] ?>" id="hinhdaidien"  style="max-height: 300px"  alt=""></a>
+                <a class="width-100p" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?> ">  <img src="item_image/<?php echo $datasp["hinh_dai_dien"] ?>" id="hinhdaidien"  style="max-height: 300px"  alt=""></a>
             </div>
 
             <a class="btn-cart btn-simple mg-t-15" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?>"><i class="fa fa-caret-right"></i><span>xem chi tiết</span></a>
@@ -172,6 +173,9 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
 
         });
     }
+	 $(document).on('mouseover', '#hinhdaidien', function () {
+		$(this).attr('title',"Copyright@2015 kinhtanphuc");
+	 });
     AjaxGetColor(<?php echo (isset($datamausp[0]['color_id'])?$datamausp[0]['color_id']:"0") ?> );
     $(document).on('click', '.rdSelect', function () {
         var sp_price= $('input:radio[name=radiosize]:checked').attr('sp_price');
@@ -181,8 +185,9 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
         color_id= $(this).attr('color_id');
         $('.color_id').removeClass('color_active');
         $(this).addClass('color_active');
-        AjaxGetColor(color_id);
         AjaxImageColor(color_id);
+        AjaxGetColor(color_id);
+
 
     });
 //

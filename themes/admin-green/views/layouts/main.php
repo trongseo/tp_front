@@ -21,6 +21,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <script src="themes/jquery.min.js"></script>
+
 </head>
 <body class="skin-blue">
 <!-- header logo: style can be found in header.less -->
@@ -153,6 +154,11 @@
 							  <li>
                             <a href="index.php?r=adminchung/edit&guid=2&is_no=1;">
                                 <i class="fa "></i> <span>Cập nhật email nhận tin</span>
+                                <small class="badge pull-right bg-green"></small>
+                            </a></li>
+                        <li>
+                            <a href="index.php?r=adminchung/edit&guid=3">
+                                <i class="fa "></i> <span>Cập nhật liên hệ</span>
                                 <small class="badge pull-right bg-green"></small>
                             </a></li>
                     </ul>

@@ -5,7 +5,7 @@
     </h1>
 
 </section>
-
+<script src="themes/jquery.alphanumeric.js"></script>
 <script src="http://malsup.github.com/jquery.form.js"></script>
 <form id="myForm" action="index.php?r=ajaxadmin/sanphamedit" method="post" enctype="multipart/form-data">
 <section class="content  bordertop">
@@ -86,6 +86,7 @@
 //        CKEDITOR.replace('mo_ta_dai');
 //        //bootstrap WYSIHTML5 - text editor
 //        $(".textarea").wysihtml5();
+        $('#ma_sp').alphanumeric({allow:""});
     });
 </script>
 <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>

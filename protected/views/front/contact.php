@@ -10,17 +10,18 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
                 <div class="form-group">
-                    <div class="col-md-12">
-                        <h5 class="text-center"><strong>CÔNG TY TRÁCH NHIỆM HỮU HẠN TÂN PHÚC</strong></h5>
-                        <address class="text-center">
-                            <p>Giám đốc điều hành: Larry Page</p>
-                            <p><strong><abbr title="address">Trụ sở:</abbr></strong> Mountain View, CA, Hoa Kỳ</p>
-                            <p><strong><abbr title="phone">Điện thoại :</abbr></strong> 0123 456 789 - <strong><abbr title="atfaxtribute">Fax :</abbr></strong> 123 545 678</p>
-                            <p><strong><abbr title="attribute">Nhà sáng lập:</abbr></strong> Larry Page, Sergey Brin</p>
-                            <p><strong><abbr title="website">website :</abbr></strong> <a href="http://kinhtanphuc.com">kinhtanphucom</a></p>
-
-                        </address>
-                    </div>
+<!--                    <div class="col-md-12">-->
+<!--                        <h5 class="text-center"><strong>CÔNG TY TRÁCH NHIỆM HỮU HẠN TÂN PHÚC</strong></h5>-->
+<!--                        <address class="text-center">-->
+<!--                            <p>Giám đốc điều hành: Larry Page</p>-->
+<!--                            <p><strong><abbr title="address">Trụ sở:</abbr></strong> Mountain View, CA, Hoa Kỳ</p>-->
+<!--                            <p><strong><abbr title="phone">Điện thoại :</abbr></strong> 0123 456 789 - <strong><abbr title="atfaxtribute">Fax :</abbr></strong> 123 545 678</p>-->
+<!--                            <p><strong><abbr title="attribute">Nhà sáng lập:</abbr></strong> Larry Page, Sergey Brin</p>-->
+<!--                            <p><strong><abbr title="website">website :</abbr></strong> <a href="http://kinhtanphuc.com">kinhtanphucom</a></p>-->
+<!---->
+<!--                        </address>-->
+<!--                    </div>-->
+                    <?php echo $hsTable["mo_ta_dai"] ?>
                 </div>
 
                 <div class="video-block-detail">
