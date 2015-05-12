@@ -92,8 +92,17 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
             </h3>
             <div class="col-md-offset-2 col-md-9 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
                 <div class="owl-carousel">
-
+                    <?php
+                        $postSP =0;
+                    $curSP =0;
+                    ?>
                     <?php foreach($dataSPCungLoai as $value):?>
+                        <?php
+                        $postSP++;
+                        if($value["san_pham_guid"]==$datasp["san_pham_guid"]){
+                            $curSP = $postSP;
+                        }
+                        ?>
                         <div class=" funfact-item   text-center">
                             <a href=""><img src="item_image/icon_<?php echo $value["hinh_dai_dien"]?>" alt=""></a>
                             <a class="detail" href="index.php?r=front/sanpham&guid=<?php echo $value["san_pham_guid"]?>"><span>chi tiết</span></a>
@@ -154,7 +163,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
         });
     }
     function AjaxImageColor(color_id){
-        $('#hinhdaidien').hide();
+        $('#hinhdaidien').hide(300);
         var san_pham_guid= $('#san_pham_guid').val();//luon luon co hidden field
         //$('#color_id').val();//luon luon co hidden field san_pham_guid color_id
         $.get( CUR_URL+"index.php?r=front/AjaxImageColor&san_pham_guid="+san_pham_guid+"&color_id="+color_id+"", function( data,status ) {
@@ -219,11 +228,36 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
     </div>
 </script>
 <script>
+    var arHinh =[];
+    var StartPosition=0;
 $(function(){
 var menuchild = $("#menuchild").html();
 
 $("ul > .active").append(menuchild);
 var san_pham_loai_guid='<?php echo $san_pham_loai_guid ?>' ;
 $('#li'+san_pham_loai_guid).addClass("active");
+
+var ii=0;
+    jQuery('.color_id').each(function() {
+
+        var currentElement = $(this);
+        arHinh[ii]=$(this).attr('color_id') ;
+        ii++;
+
+    });
+
+    var countSP='<?php echo count($dataSPCungLoai)?>';
+    var curPostSp= <?php echo $curSP?> ;
+
+    var numbershow = 5;
+    if(countSP>numbershow){
+        StartPosition=2;
+        var pageHere = Math.floor(curPostSp/numbershow);
+        StartPosition=pageHere+1+numbershow;
+    }else{
+        StartPosition=0;
+    }
+    console.log(countSP+'countsp-'+curPostSp+'sss'+StartPosition);
+    StartPosition=curPostSp-1;
 });
 </script>

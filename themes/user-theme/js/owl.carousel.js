@@ -18,7 +18,7 @@
 	 * @private
 	 */
 	drag = {
-		start: 0,
+		start: 1,
 		startX: 0,
 		startY: 0,
 		current: 0,

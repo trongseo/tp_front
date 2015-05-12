@@ -113,8 +113,9 @@
 <script type="text/javascript" src="themes/user-theme/js/jquery.nivo.slider.js"></script>
 <script src="themes/user-theme/js/jquery.bxslider.min.js"></script>
 <link href="themes/user-theme/css/jquery.bxslider.css" rel="stylesheet" />
-<script type="text/javascript" src="themes/user-theme/js/theme.js"></script>
+
 <script type="text/javascript" src="themes/user-theme/js/owl.carousel.js"></script>
+<script type="text/javascript" src="themes/user-theme/js/theme.js"></script>
 <script>
     $('.<?php echo $this->activemenu ?>').addClass('active');
 </script>

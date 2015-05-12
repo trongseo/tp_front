@@ -40,15 +40,18 @@ function galleryImages () {
 	  pagerCustom: '#bx-pager'
 	});
 }
+var OBJ_SCROLL;
+
 // OwlCarousel FunFact Section
 function owlCarousel_FunFact() {
 	var owl = $(".owl-carousel");
-		owl.owlCarousel({
+	var OBJ_SCROLL=	owl.owlCarousel({
 			loop:true,
 			autoWidth:true,
-			autoplay: true,
+			autoplay: false,
 			items:5,
 			margin:15,
+             startPosition:StartPosition,
 			responsiveClass:true,
 			animateOut: 'fadeOut',
 			navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
@@ -68,4 +71,9 @@ function owlCarousel_FunFact() {
 				}
 			}
 		});
+  //  var owl1 = $(".owl-carousel").data('owlCarousel');
+    //alert('s');
+   // debugger;
+   // owl1.goTo(8);
+  //  OBJ_SCROLL.goTo(8);
 };
