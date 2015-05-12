@@ -7,6 +7,7 @@ $(window).load(function() {
 		    startSlide: 0,                     // Set starting Slide (0 index)
 		    directionNav: true,             // Next & Prev navigation
 		    controlNav: true,                 // 1,2,3... navigation
+
 		    controlNavThumbs: false,         // Use thumbnails for Control Nav
 		    pauseOnHover: true,             // Stop animation while hovering
 		    manualAdvance: false,             // Force manual transitions
@@ -46,10 +47,11 @@ function owlCarousel_FunFact() {
 		owl.owlCarousel({
 			loop:true,
 			autoWidth:true,
-			autoplay: true,
+			autoplay: false,
 			items:5,
 			margin:15,
 			responsiveClass:true,
+            startPosition: StartPosition,
 			animateOut: 'fadeOut',
 			navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
 			responsive:{
