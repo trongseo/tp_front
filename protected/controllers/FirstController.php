@@ -10,7 +10,7 @@ class FirstController extends CController {
         $imgRight ="";
         if(count($rightImage)>0) $imgRight =$rightImage[0]["hinh_dai_dien"];
 
-    $this->render('index',array('imgRight' =>$imgRight,'data' =>$data));
+    $this->render('index',array('imgRight' =>$imgRight,'data' =>$data));Yii::app()->end();
 
 }
     public function actionSignOut() {

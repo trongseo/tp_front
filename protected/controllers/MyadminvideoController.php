@@ -52,7 +52,7 @@ class MyadminvideoController extends CController {
         $pages->pageSize = Yii::app()->params['listPerPage'];
         $dataSearch = array('models' =>$query1, 'pages' => $pages, 'itemCount'=>$item_count,'pageSize'=>Yii::app()->params['listPerPage']);
         $this->render('ajaxvideolist',array('hsTable'=>'','data'=>$query1,'dataSearch'=>$dataSearch,'datasan_pham_loai_guid'=>''));
-
+        Yii::app()->end();
     }
     public function actionVideoList() {
 
@@ -154,7 +154,7 @@ class MyadminvideoController extends CController {
        $sqlUpdate="update video_list set san_pham_guid=:san_pham_guid,text_embed=:text_embed,
        mo_ta=:mo_ta,mo_ta_ngan=:mo_ta_ngan  where video_list_guid=:video_list_guid";
        CommonDB::runSQL($sqlUpdate,$hsTable);
-        echo "ok";
+        echo "ok";Yii::app()->end();
     }
 
     public function actionChangepassword() {

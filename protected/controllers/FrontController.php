@@ -28,7 +28,7 @@ class FrontController extends CController {
             $queryI="insert into lienhe(lienhe_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:lienhe_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
             CommonDB::runSQL($queryI,$hsTable);
 
-            echo "ok";
+            echo "ok";Yii::app()->end();
             return;
 
         }
@@ -99,7 +99,7 @@ class FrontController extends CController {
             $queryI="insert into dondathang(dondathang_guid,san_pham_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:dondathang_guid,:san_pham_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
             CommonDB::runSQL($queryI,$hsTable);
 
-            echo "ok";
+            echo "ok";Yii::app()->end();
             return;
 
         }else{
@@ -187,7 +187,7 @@ class FrontController extends CController {
         $subquery=" SELECT `image1` FROM `san_pham_hinh`  WHERE `san_pham_guid`='$san_pham_guid' AND `color_guid_id`='$color_id' order by so_thu_tu LIMIT 1
                                ";
         $dataimage= CommonDB::GetAll($subquery,[]);
-        echo  json_encode($dataimage);
+        echo  json_encode($dataimage);Yii::app()->end();
     }
     public function actionAjaxGetSize() {
         Yii::app()->theme = '';
@@ -199,7 +199,7 @@ class FrontController extends CController {
                          WHERE `san_pham_guid`='$san_pham_guid'  AND color_id='$color_id')
                          AND  aa.`san_pham_guid`='$san_pham_guid' AND color_id='$color_id'
                          ORDER BY size_text ",[]);
-        echo  json_encode($datasize);
+        echo  json_encode($datasize);Yii::app()->end();
     }
     public function actionAjaxupdate() {
         Yii::app()->theme = '';
@@ -212,7 +212,7 @@ class FrontController extends CController {
             $hsTable["aaachung_guid"]=$guid_id ;
             $hsTable["mo_ta_dai"]=$_REQUEST["mo_ta_dai"] ;
             CommonDB::runSQL($queryIn,$hsTable);
-            echo "1";
+            echo "1";Yii::app()->end();
 
         }
     }
@@ -228,7 +228,7 @@ class FrontController extends CController {
         $query=" delete from lienhe  where lienhe_guid=:lienhe_guid ";
         $hs["lienhe_guid"]=$lienhe_guid;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
 
 
@@ -247,7 +247,7 @@ class FrontController extends CController {
         $query=" delete from dondathang  where dondathang_guid=:dondathang_guid ";
         $hs["dondathang_guid"]=$dondathang_guid;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
 
 

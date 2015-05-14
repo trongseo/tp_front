@@ -25,8 +25,9 @@
                 </div>
 
                 <div class="video-block-detail">
-                    <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=380%2F23%20L%C3%AA%20Tr%E1%BB%8Dng%20T%E1%BA%A5n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20T%C3%A2n%20Ph%C3%BA%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam&key=AIzaSyD4BdR6CTqDFtmFXN860KKfrYHbrfbdFz8"></iframe>
-<!--                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3918.589757644037!2d106.61534400000001!3d10.8426738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752a3226f9886b%3A0x19a5a86493286df0!2zQW4gU8awxqFuZywgUXXhuq1uIDEyLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1428598893597" width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
+                    <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=380+L%C3%AA+Tr%E1%BB%8Dng+T%E1%BA%A5n,+T%C3%A2n+Ph%C3%BA,+H%E1%BB%93+Ch%C3%AD+Minh&amp;aq=0&amp;oq=38&amp;sll=10.879183,106.799662&amp;sspn=0.012791,0.021136&amp;gl=VN&amp;ie=UTF8&amp;hq=&amp;hnear=380+L%C3%AA+Tr%E1%BB%8Dng+T%E1%BA%A5n,+T%C3%A2n+Ph%C3%BA,+H%E1%BB%93+Ch%C3%AD+Minh&amp;ll=10.808012,106.619355&amp;spn=0.012794,0.021136&amp;t=m&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=vi&amp;geocode=&amp;q=380+L%C3%AA+Tr%E1%BB%8Dng+T%E1%BA%A5n,+T%C3%A2n+Ph%C3%BA,+H%E1%BB%93+Ch%C3%AD+Minh&amp;aq=0&amp;oq=38&amp;sll=10.879183,106.799662&amp;sspn=0.012791,0.021136&amp;gl=VN&amp;ie=UTF8&amp;hq=&amp;hnear=380+L%C3%AA+Tr%E1%BB%8Dng+T%E1%BA%A5n,+T%C3%A2n+Ph%C3%BA,+H%E1%BB%93+Ch%C3%AD+Minh&amp;ll=10.808012,106.619355&amp;spn=0.012794,0.021136&amp;t=m&amp;z=14" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small>
+
+
                 </div>
                 <div class="form-group">
                     <div class="col-md-12 text-center">

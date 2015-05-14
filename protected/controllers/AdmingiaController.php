@@ -16,7 +16,7 @@ class AdmingiaController extends CController {
         $query=" delete from san_pham_price  where san_pham_price_guid=:san_pham_price_guid ";
         $hs["san_pham_price_guid"]=$guid_id;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
     public function actionLoadallprice() {
         Yii::app()->theme = '';
@@ -26,7 +26,7 @@ class AdmingiaController extends CController {
  WHERE a.`color_id`=aaa.color_id AND a.`m_size_guid`=aa.`m_size_guid` and a.san_pham_guid='$san_pham_guid' order by a.date_create";
         $data = CommonDB::GetAll($query,[]);
         $this->render('giasanphamlist',array('data'=>$data));
-
+        Yii::app()->end();
 
     }
     public function actionGiasanpham() {
@@ -56,14 +56,14 @@ class AdmingiaController extends CController {
         $m_size_guid=$_GET["m_size_guid"];
         $san_pham_guid=$_REQUEST["san_pham_guid"];
         $hsTable=CommonDB::GetAll ("select * from san_pham_price where san_pham_guid='".$san_pham_guid."' and color_id='".$color_id."' and m_size_guid='".$m_size_guid."' ",[]);
-        if(count($hsTable)==0){echo "";};
-        echo json_encode($hsTable);
+        if(count($hsTable)==0){echo "[]";Yii::app()->end();return;}
+        echo json_encode($hsTable);Yii::app()->end();
     }
     public function actionAjaxGiasanphamguid() {
         $san_pham_price_guid = $_GET["guid"];
         $hsTable=CommonDB::GetAll("select * from san_pham_price where san_pham_price_guid='".$san_pham_price_guid."'",[]);
-        if(count($hsTable)==0){echo "";};
-        echo json_encode($hsTable);
+        if(count($hsTable)==0){echo "";Yii::app()->end();};
+        echo json_encode($hsTable);Yii::app()->end();
     }
     public function actionAjaxupdate() {
         Yii::app()->theme = '';
@@ -83,7 +83,7 @@ class AdmingiaController extends CController {
             $hsTable["m_size_guid"]=$_REQUEST["m_size_guid"] ;
             $hsTable["sp_price"]= str_replace(".","",$_REQUEST["sp_price"])  ;
             CommonDB::runSQL($queryIn,$hsTable);
-            echo "1";
+            echo "1";Yii::app()->end();
 
         }
     }

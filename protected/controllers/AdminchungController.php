@@ -22,7 +22,7 @@ class AdminchungController extends CController {
             $hsTable["aaachung_guid"]=$guid_id ;
             $hsTable["mo_ta_dai"]=$_REQUEST["mo_ta_dai"] ;
             CommonDB::runSQL($queryIn,$hsTable);
-            echo "1";
+            echo "1";Yii::app()->end();
 
         }
     }
@@ -38,7 +38,7 @@ class AdminchungController extends CController {
         $query=" delete from lienhe  where lienhe_guid=:lienhe_guid ";
         $hs["lienhe_guid"]=$lienhe_guid;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
 
 
@@ -56,7 +56,7 @@ class AdminchungController extends CController {
         $query=" delete from dondathang  where dondathang_guid=:dondathang_guid ";
         $hs["dondathang_guid"]=$dondathang_guid;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
 
 

@@ -45,12 +45,12 @@ class TesttestController extends CController {
          }else{
          $this->render('uploadimage', array( 'oneRow'=>''));
          }
-
+         Yii::app()->end();
      }
     public function actionIndex() {
 
         $tableName = $_REQUEST["tb"];
-       $this->insertGen($tableName);
+       $this->insertGen($tableName);Yii::app()->end();
     }
     public  function insertGen($tableName){
         //

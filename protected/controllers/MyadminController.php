@@ -93,7 +93,7 @@ class MyadminController extends UsersController{
         $pages->pageSize = Yii::app()->params['listPerPage'];
         $dataSearch = array('models' =>$dataq, 'pages' => $pages, 'itemCount'=>$item_count,'pageSize'=>Yii::app()->params['listPerPage']);
         $this->render('ajaxiplist',array('hsTable'=>$hsTable,'data'=>$dataq,'dataSearch'=>$dataSearch,'hsSearch'=>$hsSearch));
-
+        Yii::app()->end();
 
 
 
@@ -285,7 +285,7 @@ class MyadminController extends UsersController{
         $query=" delete from san_pham_loai  where san_pham_loai_guid=:san_pham_loai_guid ";
         $hs["san_pham_loai_guid"]=$san_pham_loai_guid;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
 
 }

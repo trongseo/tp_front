@@ -70,7 +70,7 @@
                                 <a href="index.php?r=front/intro"><span class="underline">Giới Thiệu</span></a>
                             </li>
                             <li class="sanpham" >
-                                <a href="index.php?r=front/sanpham"  ><span class="underline">Sản Phẩm</span></a>
+                                <a href="index.php?r=front/sanpham"  class="menu-name" ><span class="underline">Sản Phẩm</span></a>
                             </li>
                             <li class="support" >
                                 <a href="index.php?r=front/support"><span class="underline">Hỗ Trợ Kỹ Thuật</span></a>
@@ -116,7 +116,12 @@
 <script type="text/javascript" src="themes/user-theme/js/theme.js"></script>
 <script type="text/javascript" src="themes/user-theme/js/owl.carousel.js"></script>
 <script>
-    $('.<?php echo $this->activemenu ?>').addClass('active');
+    var classac = '<?php echo $this->activemenu ?>';
+    $('.'+classac).addClass('active');
+    if(classac=='sanpham'){
+        $('.'+classac +'> .menu-name').attr("href","javascript:void(0);");
+    }
+
 </script>
 </body>
 </html>
