@@ -37,7 +37,7 @@ class AjaxadminController extends UsersController {
         CommonDB::runSQL($query,[]);
         $query = "update  san_pham set isshowhome=1 where san_pham_guid='".$guid_id."' ";
         CommonDB::runSQL($query,[]);
-        echo "ok";
+        echo "ok";Yii::app()->end();
     }
 
     public function actionUploadImage() {
@@ -45,7 +45,7 @@ class AjaxadminController extends UsersController {
         if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image"]["name"]) && ($_FILES["uploaded_image"]["name"]!="") ) {
             $strResult = $this->checkImageFile("uploaded_image");
             if($strResult !=""){
-                echo $strResult;exit();
+                echo $strResult;Yii::app()->end();exit();
 
             }
             $guid_id_insert = Common::guid();
@@ -77,13 +77,14 @@ class AjaxadminController extends UsersController {
             //$image->scale(50);
 
         }
+        Yii::app()->end();
     }
 	public function actionUploadImagetrangchu() {
 define("image_folder","item_image/trangchu/");
 if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_FILES["uploaded_image2"]["name"]!="") ) {
 				    $strResult = $this->checkImageFile("uploaded_image2");
 					if($strResult !=""){
-						echo $strResult;exit();
+						echo $strResult;Yii::app()->end();exit();
 					}
 					  $image1 = new SimpleImage();
 					  
@@ -95,7 +96,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
         if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image"]["name"]) && ($_FILES["uploaded_image"]["name"]!="") ) {
             $strResult = $this->checkImageFile("uploaded_image");
             if($strResult !=""){
-                echo $strResult;exit();
+                echo $strResult;Yii::app()->end();exit();
 
             }
 			   
@@ -123,7 +124,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             $hsTable["tooltip"]='';
             $hsTable["is_daidien"]='0';
             $hsTable["color_guid_id"]=$colorId ;
-           CommonDB::runSQL($queryIn,$hsTable);
+           CommonDB::runSQL($queryIn,$hsTable);Yii::app()->end();
             // $image->output();
             //$image->scale(50);
 
@@ -137,7 +138,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             if( isset($_FILES["uploaded_image"]["name"]) && ($_FILES["uploaded_image"]["name"]!="")  ){
                 $strResult = $this->checkImageFile("uploaded_image");
                 if($strResult !=""){
-                    echo $strResult;exit();return;
+                    echo $strResult;exit();Yii::app()->end();return;
 
                 }
 
@@ -172,7 +173,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             if( isset($_FILES["uploaded_image"]["name"]) && ($_FILES["uploaded_image"]["name"]!="")  ){
                 $strResult = $this->checkImageFile("uploaded_image");
                 if($strResult !=""){
-                    echo $strResult;exit();return;
+                    echo $strResult;exit();Yii::app()->end();return;
                 }
             }
             if( isset($_FILES["uploaded_image"]["name"]) && ($_FILES["uploaded_image"]["name"]!="")  ){
@@ -196,13 +197,14 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             //$image->scale(50);
 
         }
+        Yii::app()->end();
     }
 
     public function actionDeleteSanPham() {
         $guid_id=$_REQUEST["guid_id"];
         $query = "delete from san_pham where san_pham_guid='".$guid_id."' ";
         CommonDB::runSQL($query,[]);
-        echo "ok";
+        echo "ok";Yii::app()->end();
     }
 	public function actionDeleteimagetrangchu() {
 
@@ -219,7 +221,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             unlink( $file);
         }
         $query = "delete from trangchuhinh where san_pham_hinh_guid='".$guid_id."' ";
-        CommonDB::runSQL($query,[]);
+        CommonDB::runSQL($query,[]);Yii::app()->end();
 
     }
     public function actionDeleteimage() {
@@ -237,7 +239,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
             unlink( $file);
         }
         $query = "delete from san_pham_hinh where san_pham_hinh_guid='".$guid_id."' ";
-        CommonDB::runSQL($query,[]);
+        CommonDB::runSQL($query,[]);Yii::app()->end();
 
     }
     public function actionHinhtrangchulist() {
@@ -246,7 +248,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
         $colorId=$_REQUEST["color_id"];
         $query="Select * from trangchuhinh where color_guid_id='$colorId' and san_pham_guid='$san_pham_guid'";
         $data = CommonDB::GetAll($query,[]);
-        $this->render('hinhtrangchulist',array('data'=>$data));
+        $this->render('hinhtrangchulist',array('data'=>$data));Yii::app()->end();
 
 
     }
@@ -256,7 +258,7 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
         $colorId=$_REQUEST["color_id"];
         $query="Select * from san_pham_hinh where color_guid_id='$colorId' and san_pham_guid='$san_pham_guid'";
         $data = CommonDB::GetAll($query,[]);
-        $this->render('hinhsanphamlist',array('data'=>$data));
+        $this->render('hinhsanphamlist',array('data'=>$data));Yii::app()->end();
 
 
     }
@@ -271,10 +273,10 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
         $hsTable["ma_sp"]=$ma_sp;
         $data = CommonDB::GetAll($query,$hsTable);
         if(count($data)>0){
-            echo "0";
+            echo "0";Yii::app()->end();
             return;
         }
-        echo "1";
+        echo "1";Yii::app()->end();
 
     }
 
@@ -427,14 +429,14 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
         $query=" delete from m_size  where m_size_guid=:m_size_guid ";
         $hs["m_size_guid"]=$m_size_guid;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
     public function actionColorDelete() {
         $color_id = $_REQUEST["color_id"];
         $query=" delete from m_color  where color_id=:color_id ";
         $hs["color_id"]=$color_id;
         CommonDB::runSQL($query,$hs);
-        echo "1";
+        echo "1";Yii::app()->end();
     }
 
 
