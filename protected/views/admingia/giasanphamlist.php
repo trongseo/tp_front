@@ -17,7 +17,7 @@
                 <td> <?php echo $value["size_text"]?></td>
                 <td> <?php echo $value["sp_price"]?></td>
                 <td>
-                    <button class="btn btn-info btn-sm cssdelete" type="button"  guid_id="<?php echo $value["san_pham_price_guid"]?>" >Xóa</button>
+                    <button class="btn btn-info btn-sm cssdelete" id='id<?php echo $value["san_pham_price_guid"]?>' type="button"  guid_id="<?php echo $value["san_pham_price_guid"]?>"  name='id<?php echo $value["san_pham_price_guid"]?>' type="button"  guid_id="<?php echo $value["san_pham_price_guid"]?>" >Xóa</button>
                     <button class="btn btn-info btn-sm cssedit" guid_id="<?php echo $value["san_pham_price_guid"]?>" type="button"  >Sửa</button>
                 </td>
 
@@ -29,16 +29,4 @@
         </tbody></table>
 </div>
 <!--<script src="http://120.72.106.146:66/themes/user-templete/js/jquery.min.js"></script>-->
-<script>
-$(document).on('click', '.cssdelete', function () {
-    guid_id = $(this).attr("guid_id");
-    var cf = confirm("Bạn có chắc muốn xóa?");
-    if(cf)
-    $.get("index.php?r=admingia/ajaxdelete&guid_id="+guid_id +"&imagename=", function (data, status) {
-      $('.remove'+guid_id).hide()  ;
 
-    });
-
-});
-
-</script>

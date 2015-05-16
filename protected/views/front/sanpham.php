@@ -53,7 +53,7 @@ $dataSPCungLoai=[];
 
 
                         <li>
-                            <div class="box-color"><img src="item_image/<?php echo $value["image1"]?>"></div>
+                            <div class="box-color"><img width="20px" height="20px" src="item_image/<?php echo $value["image1"]?>"></div>
          <span class="underline color_id" color_id='<?php echo $value["color_id"]?>'>
           <?php echo $value["color_name"]?>
          </span>
@@ -69,7 +69,7 @@ $dataSPCungLoai=[];
             </div>
             <div class="aside-right">
                 <h5><i class="fa fa-caret-right append-icon"></i>Kích thước</h5>
-                <p class="param">Rộng - cao - dài</p>
+                <p class="param">Rộng - dài - cao</p>
                 <ul class="list-size listsize">
 
                 </ul>
@@ -187,7 +187,7 @@ $dataSPCungLoai=[];
         $(document).on('mouseover', '#hinhdaidien', function () {
             $(this).attr('title',"Copyright@2015 kinhtanphuc");
         });
-        AjaxGetColor(<?php echo (isset($datamausp[0]['color_id'])?$datamausp[0]['color_id']:"0") ?> );
+        AjaxGetColor('<?php echo (isset($datamausp[0]['color_id'])?$datamausp[0]['color_id']:"0") ?>' );
         $(document).on('click', '.rdSelect', function () {
             var sp_price= $('input:radio[name=radiosize]:checked').attr('sp_price');
             $('#spprice').html(sp_price);

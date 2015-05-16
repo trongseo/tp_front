@@ -213,6 +213,21 @@ function loadPrice(){
 
 </script>
 <script>
+$(document).on('click', '.cssdelete', function () {
+    guid_id = $(this).attr("guid_id");
+	
+    var cf = confirm("Bạn có chắc muốn xóa?");
+    if(cf)
+    $.get("index.php?r=admingia/ajaxdelete&guid_id="+guid_id +"&imagename=", function (data, status) {
+      $('.remove'+guid_id).remove()  ;
+
+    });
+
+});
+
+</script>
+<script>
+
     function var_dump() {
         //  discuss at: http://phpjs.org/functions/var_dump/
         // original by: Brett Zamir (http://brett-zamir.me)

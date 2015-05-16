@@ -17,8 +17,12 @@ $db_pw = "INSERT_DB_PASSWORD_HERE";
 //define("DB_NAME","test_glass1");
 //define("DB_USERNAME","test_glass1");
 //define("DB_PASSWORD","123456789");
+define("SMTP_HOST","mail.kinhtanphuc.com");
+define("ADMIN_EMAIL","info@kinhtanphuc.com");
+define("SMTP_USERNAME","info@kinhtanphuc.com");
+define("SMTP_PASSWORD","123456");
 
 define("DB_HOST","localhost");
-define("DB_NAME","test_glass1");
+define("DB_NAME","kinhtanp_db");
 define("DB_USERNAME","root");
 define("DB_PASSWORD","");

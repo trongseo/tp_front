@@ -27,7 +27,7 @@ class FrontController extends CController {
             $hsTable["noidung"]=$_REQUEST["noidung"];
             $queryI="insert into lienhe(lienhe_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:lienhe_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
             CommonDB::runSQL($queryI,$hsTable);
-
+            SendMail("info@kinhtanphuc.com","trongtayninh@gmail.com","tieu de mail","Noi dung email");
             echo "ok";Yii::app()->end();
             return;
 
@@ -141,6 +141,11 @@ class FrontController extends CController {
             $dataSP =   CommonDB::GetAll($queryTop,[]);
             if(count($dataSP)>0){
                // var_dump($dataSP) ;exit();
+                $spdautienid=$dataSP[0]["san_pham_guid"];
+            }else{
+                $queryTop = "  SELECT san_pham_guid FROM san_pham WHERE san_pham_loai_guid=(
+                        SELECT san_pham_loai_guid FROM san_pham_loai ORDER BY so_thu_tu LIMIT 1 ) ORDER BY date_update desc ";
+                $dataSP =   CommonDB::GetAll($queryTop,[]);
                 $spdautienid=$dataSP[0]["san_pham_guid"];
             }
         }

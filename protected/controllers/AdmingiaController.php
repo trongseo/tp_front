@@ -82,7 +82,8 @@ class AdmingiaController extends CController {
             $hsTable["color_id"]=$_REQUEST["color_id"] ;
             $hsTable["m_size_guid"]=$_REQUEST["m_size_guid"] ;
             $hsTable["sp_price"]= str_replace(".","",$_REQUEST["sp_price"])  ;
-            CommonDB::runSQL($queryIn,$hsTable);
+          //  var_dump($hsTable,$queryIn);
+          CommonDB::runSQL($queryIn,$hsTable);
             echo "1";Yii::app()->end();
 
         }
