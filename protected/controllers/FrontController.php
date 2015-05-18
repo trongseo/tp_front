@@ -12,7 +12,9 @@ class FrontController extends CController {
     }
     public function actionContact() {
         $this->activemenu="contact";
+		$query1="select * from nvkinhdoanh order by ten";
 
+            $datanv = CommonDB::GetAll($query1,[]);
         if( isset($_POST["btnsave"]) )
         {
             Yii::app()->theme = '';
@@ -27,7 +29,10 @@ class FrontController extends CController {
             $hsTable["noidung"]=$_REQUEST["noidung"];
             $queryI="insert into lienhe(lienhe_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:lienhe_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
             CommonDB::runSQL($queryI,$hsTable);
-            SendMail("info@kinhtanphuc.com","trongtayninh@gmail.com","tieu de mail","Noi dung email");
+            $drG = CommonDB::GetDataRowKeyGuid("aaachung","2");
+            $emailist = $drG["mo_ta_dai"];
+            $noidungemail= $hsTable["hoten"].'<br/> Điện thoại:'.$hsTable["dienthoai"].'<br/> Email:'.$hsTable["email"].'<br/>'.$hsTable["tieude"].'<br/>'. $hsTable["noidung"];
+            SendMail("info@kinhtanphuc.com",$emailist,"Khach hang lien he :".$_REQUEST["hoten"]."".$hsTable["dienthoai"],$noidungemail);
             echo "ok";Yii::app()->end();
             return;
 
@@ -35,7 +40,7 @@ class FrontController extends CController {
         $this->pageTitle = "Liên hệ";
 
         $data = CommonDB::GetDataRowKeyGuid("aaachung",'3');
-        $this->render('contact',   array('hsTable'=>$data));
+        $this->render('contact',   array('hsTable'=>$data,'datanv'=>$datanv));
     }
     public function actionSupport() {
 
@@ -98,6 +103,13 @@ class FrontController extends CController {
             $hsTable["noidung"]=$_REQUEST["noidung"];
             $queryI="insert into dondathang(dondathang_guid,san_pham_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:dondathang_guid,:san_pham_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
             CommonDB::runSQL($queryI,$hsTable);
+            $drG = CommonDB::GetDataRowKeyGuid("aaachung","2");
+            $emailist = $drG["mo_ta_dai"];
+           // http://kinhtanphuc.com/index.php?r=front/dathang&san_pham_guid=
+
+            $noidungemail= $hsTable["hoten"].'<br/> Điện thoại:'.$hsTable["dienthoai"].'<br/> Email:'.$hsTable["email"].'<br/>'.$hsTable["tieude"].'<br/>'. $hsTable["noidung"];
+            $noidungemail .= '<br/> Xem sản phẩm: <a href="http://kinhtanphuc.com/index.php?r=front/sanpham&guid='.$guid_id.'" >http://kinhtanphuc.com/index.php?r=front/sanpham&guid='.$guid_id.'</a>';
+            SendMail("info@kinhtanphuc.com",$emailist,"Đơn hàng mới :".$_REQUEST["hoten"]."".$hsTable["dienthoai"],$noidungemail);
 
             echo "ok";Yii::app()->end();
             return;

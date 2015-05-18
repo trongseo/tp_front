@@ -3,7 +3,7 @@
 
 
 ?>
-<form id="registration-form" method="post" onsubmit="return validateForm();" class="form-horizontal" action="index.php?r=front/contact">
+
 
 
     <section class="support">
@@ -29,6 +29,24 @@
 
 
                 </div>
+				
+				<div class="form-group">
+                    <div class="col-md-12 ">
+                        <h5 class="text-uppercase"><strong>Liên hệ nhân viên kinh doanh</strong></h5>
+						<?php foreach($datanv as $value):?>
+                              <input  style='background:yellow' class='email col-sm-offset-2 ' type="button" id="<?php echo $value["nvkinhdoanh_id"]  ?>" name="<?php echo $value["nvkinhdoanh_id"]  ?>" class="btn btn-default" value="Gởi email" email='<?php echo $value["email"]  ?>'>  <?php
+                               
+                                    echo $value["ten"].' -(Phone: '.$value["sodienthoai"].' )'.'.Email:'.$value["email"];
+                                ?>
+								
+								<br/>
+	
+                            <?php endforeach?>
+							
+                        <p></p>
+                    </div>
+                </div>
+				
                 <div class="form-group">
                     <div class="col-md-12 text-center">
                         <h5 class="text-uppercase"><strong>vui lòng điền đầy đủ thông tin dưới đây</strong></h5>
@@ -36,7 +54,7 @@
                     </div>
                 </div>
 
-                <form class="form-horizontal">
+              <form id="registration-form" method="post" onsubmit="return validateForm();" class="form-horizontal" action="index.php?r=front/contact">
                     <div class="form-group">
                         <label for="hoten" class="col-sm-2 control-label">Họ tên</label>
                         <div class="col-sm-10">
@@ -78,7 +96,7 @@
     </section>
     </div>
     <!-- .container -->
-</form>
+
 
 <script>
 
@@ -162,7 +180,7 @@
             success: function()
             {
 
-                alert("Đã gửi thành công!Hãy gửi emailxxxxxxxxxx");
+                alert("Đã gửi thành công!Xin cám ơn quý khách.Chúng tôi sẽ liên lạc trong thời gian ngắn nhất.");
 
             },
             complete: function(response)

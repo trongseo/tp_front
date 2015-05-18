@@ -155,7 +155,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
             success: function()
             {
 
-                alert("Đã gửi thành công!Hãy gửi emailxxxxxxxxxx");
+                alert("Đã gửi thành công!Xin cám ơn quý khách.Chúng tôi sẽ liên lạc trong thời gian ngắn nhất.");
 
             },
             complete: function(response)
