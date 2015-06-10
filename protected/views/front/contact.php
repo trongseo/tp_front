@@ -30,19 +30,20 @@
 
                 </div>
 				
-				<div class="form-group">
+				<div class="form-group" style="display:none">
                     <div class="col-md-12 ">
                         <h5 class="text-uppercase"><strong>Liên hệ nhân viên kinh doanh</strong></h5>
 						<?php foreach($datanv as $value):?>
-                              <input  style='background:yellow' class='email col-sm-offset-2 ' type="button" id="<?php echo $value["nvkinhdoanh_id"]  ?>" name="<?php echo $value["nvkinhdoanh_id"]  ?>" class="btn btn-default" value="Gởi email" email='<?php echo $value["email"]  ?>'>  <?php
+                              <input  style='background:yellow' class='email btnemail col-sm-offset-2 ' type="button" id="<?php echo $value["nvkinhdoanh_id"]  ?>" name="<?php echo $value["nvkinhdoanh_id"]  ?>" class="btn btn-default" value="Gởi email đến:<?php echo $value["email"]  ?>" email='<?php echo $value["email"]  ?>'>  <?php
                                
-                                    echo $value["ten"].' -(Phone: '.$value["sodienthoai"].' )'.'.Email:'.$value["email"];
+                                    //echo $value["ten"].' -(Phone: '.$value["sodienthoai"].' )'.'.Email:'.$value["email"];
+									echo $value["ten"].' -(Phone: '.$value["sodienthoai"].' )';
                                 ?>
 								
 								<br/>
 	
                             <?php endforeach?>
-							
+							<input style="background:yellow" class="email btnemail col-sm-offset-2 " type="button" id="EB4F711A_AD37_9ED7_FCB8_C6A750589E5w" name="EB4F711A_AD37_9ED7_FCB8_C6A750589E5w" value="Gởi đến công ty" email="">
                         <p></p>
                     </div>
                 </div>
@@ -88,7 +89,8 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" id="btnsave" name="btnsave"  class="btn btn-default" value="Gởi yêu cầu">
+						<input type="hidden" id="emailto" name="emailto"  value=""/>
+                            <input type="submit" id="btnsave" name="btnsave"  class="btn btn-default" value="Gởi đến công ty">
                         </div>
                     </div>
                 </form>
@@ -165,6 +167,17 @@
     }
     $(document).ready(function()
     {
+		//$('#hoten').focus();
+		$('.btnemail').click(function(){
+			var myemail = $(this).attr('email');
+			$('#emailto').val(myemail);
+			if(myemail=="")
+			{
+					$('#btnsave').val("Gửi đến công ty");
+			}else
+			$('#btnsave').val("Gửi email đến:"+myemail);
+			$('#hoten').focus();
+		});
 
         var options = {
             beforeSend: function()

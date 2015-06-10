@@ -22,6 +22,21 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                 </div>
 
             </div>
+            <div class="row">
+                <div class="col-smd-4">
+                   <b>Màu</b>:<?php echo $rowsan_pham_price["color_name"] ?>  <br/>
+                    <b> Kích cỡ</b>:<?php echo $rowsan_pham_price["size_text"] ?>  <br/>
+                    <b> Giá</b>: <span id="spprice" >(liên hệ)</span>  <br/>
+                    <script>
+                        if(window.location.href.indexOf('tanphucglass')==-1){
+                           $('#spprice').html('<?php echo $rowsan_pham_price["sp_price"] ?>') ;
+                        }
+
+                    </script>
+                </div>
+
+            </div>
+
             <div class="form-group">
                 <div class="box-img">
                     <img src="item_image/icon_<?php echo $datasp["hinh_dai_dien"] ?>" alt="">

@@ -45,7 +45,7 @@ class AdminchungController extends CController {
 
     public function actionDondathang() {
         $this->pageTitle = "Danh sách đơn đặt hàng";
-        $query="Select hinh_dai_dien,ma_sp, dondathang_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung from dondathang,san_pham where dondathang.san_pham_guid=san_pham.san_pham_guid
+        $query="Select hinh_dai_dien,ma_sp, dondathang_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung,san_pham_price_guid from dondathang,san_pham where dondathang.san_pham_guid=san_pham.san_pham_guid
           order by dondathang.date_create desc";
         $data = CommonDB::GetAll($query,[]);
         $this->render('dondathang',  array('data'=>$data));

@@ -21,6 +21,12 @@ define("SMTP_HOST","mail.kinhtanphuc.com");
 define("ADMIN_EMAIL","info@kinhtanphuc.com");
 define("SMTP_USERNAME","info@kinhtanphuc.com");
 define("SMTP_PASSWORD","123456");
+define("SMTP_INCLUDED",1);
+
+//define("DB_HOST","localhost");
+//define("DB_NAME","kinhtanp_db");
+//define("DB_USERNAME","kinhtanp_db");
+//define("DB_PASSWORD","!}8up6K320c(");
 
 define("DB_HOST","localhost");
 define("DB_NAME","kinhtanp_db");

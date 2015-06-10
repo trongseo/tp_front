@@ -301,6 +301,89 @@ if( isset($_POST['bsubmit']) && isset($_FILES["uploaded_image2"]["name"]) && ($_
 
         $this->render('colorupdatelist',array('data'=>$data));
     }
+	public function actionNvkinhdoanh() {
+
+        Yii::app()->theme = 'admin-green';
+        $this->pageTitle = 'Danh sách nhân viên kinh doanh';
+        if(isset($_REQUEST["add"])){
+            $nvkinhdoanh_id = CommonDB::guid();
+            $query="insert into nvkinhdoanh(nvkinhdoanh_id) values('$nvkinhdoanh_id')";
+           CommonDB::runSQL($query,[]);
+            $this->redirect("index.php?r=ajaxadmin/nvkinhdoanh");
+            return;
+        }
+        if( isset($_POST['bsubmit'])) {
+            $this->NvkinhdoanhUpdate();
+        }
+        $query="Select * from nvkinhdoanh	 order by ten ";
+        $data = CommonDB::GetAll($query,[]);
+
+        $this->render('nvkinhdoanh',array('data'=>$data));
+    }
+	public function NvkinhdoanhUpdate() {
+
+        $i=0;
+        $list =[];
+        $forbiddenword = 'ten_';  
+        foreach($_POST as $key=>$value)
+        {
+            if(preg_match("/$forbiddenword/i", $key)){
+                $guid_id = substr($key,strlen ($forbiddenword));
+                if (!in_array($guid_id, $list)){
+                    $list[$i]=$guid_id;
+                    $i++;
+                    $query="update nvkinhdoanh set ten=:ten where nvkinhdoanh_id=:nvkinhdoanh_id";
+                    $hs["ten"]=$_REQUEST["ten_".$guid_id];
+                    $hs["nvkinhdoanh_id"]=$guid_id;
+                    CommonDB::runSQL($query,$hs);
+                }
+            }
+        }
+
+        $i=0;
+        $list =[];
+        $forbiddenword1 = 'email_';
+        foreach($_POST as $key=>$value)
+        {
+            if(preg_match("/$forbiddenword1/i", $key)){
+                $guid_id = substr($key,strlen ($forbiddenword1));
+                if (!in_array($guid_id, $list)){
+                    $list[$i]=$guid_id;
+                    $i++;
+                    $query="update nvkinhdoanh set email=:email where nvkinhdoanh_id=:nvkinhdoanh_id";
+                    $hs1["email"]=$_REQUEST["email_".$guid_id];
+                    $hs1["nvkinhdoanh_id"]=$guid_id;
+                    CommonDB::runSQL($query,$hs1);
+                }
+            }
+
+        }
+		
+		 $i=0;
+        $list =[];
+        $forbiddenword2 = 'sodienthoai_';
+		$hs2=[];
+        foreach($_POST as $key=>$value)
+        {
+            if(preg_match("/$forbiddenword2/i", $key)){
+                $guid_id = substr($key,strlen ($forbiddenword2));
+                if (!in_array($guid_id, $list)){
+                    $list[$i]=$guid_id;
+                    $i++;
+                    $query="update nvkinhdoanh set sodienthoai=:sodienthoai where nvkinhdoanh_id=:nvkinhdoanh_id";
+                    $hs2["sodienthoai"]=$_REQUEST[$forbiddenword2.$guid_id];
+                    $hs2["nvkinhdoanh_id"]=$guid_id;
+                    CommonDB::runSQL($query,$hs2);
+                }
+            }
+
+        }
+		
+        
+
+
+
+    }
 	
     public function colorUpdateList() {
 

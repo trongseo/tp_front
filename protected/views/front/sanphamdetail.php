@@ -54,7 +54,7 @@ $san_pham_loai_guid= $datasp["san_pham_loai_guid"];
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <a class="btn-cart btn-simple mg-l-40" href="index.php?r=front/dathang&san_pham_guid=<?php  echo $datasp["san_pham_guid"]; ?>"><i class="fa fa-caret-right"></i><span>đặt hàng</span></a>
+                        <a class="btn-cart btn-simple mg-l-40" href="index.php?r=front/dathang&san_pham_guid=<?php  echo $datasp["san_pham_guid"]; ?>&san_pham_price_guid=<?php  echo $_REQUEST["san_pham_price_guid"]; ?>"><i class="fa fa-caret-right"></i><span>đặt hàng</span></a>
                     </div>
                 </div>
             </div>

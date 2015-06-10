@@ -33,6 +33,9 @@ class FrontController extends CController {
             $emailist = $drG["mo_ta_dai"];
             $noidungemail= $hsTable["hoten"].'<br/> Điện thoại:'.$hsTable["dienthoai"].'<br/> Email:'.$hsTable["email"].'<br/>'.$hsTable["tieude"].'<br/>'. $hsTable["noidung"];
             SendMail("info@kinhtanphuc.com",$emailist,"Khach hang lien he :".$_REQUEST["hoten"]."".$hsTable["dienthoai"],$noidungemail);
+            if($_REQUEST["emailto"]!=""){
+                SendMail("info@kinhtanphuc.com",$_REQUEST["emailto"],"Khach hang lien he :".$_REQUEST["hoten"]."".$hsTable["dienthoai"],$noidungemail);
+            }
             echo "ok";Yii::app()->end();
             return;
 
@@ -101,7 +104,8 @@ class FrontController extends CController {
             $hsTable["diachi"]="";
             $hsTable["tieude"]=$_REQUEST["tieude"];
             $hsTable["noidung"]=$_REQUEST["noidung"];
-            $queryI="insert into dondathang(dondathang_guid,san_pham_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:dondathang_guid,:san_pham_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
+            $hsTable["san_pham_price_guid"]=Yii::app()->session['san_pham_price_guid'];
+            $queryI="insert into dondathang(san_pham_price_guid,dondathang_guid,san_pham_guid,hoten,email,dienthoai,fax,diachi,tieude,noidung) values(:san_pham_price_guid,:dondathang_guid,:san_pham_guid,:hoten,:email,:dienthoai,:fax,:diachi,:tieude,:noidung)";
             CommonDB::runSQL($queryI,$hsTable);
             $drG = CommonDB::GetDataRowKeyGuid("aaachung","2");
             $emailist = $drG["mo_ta_dai"];
@@ -115,12 +119,19 @@ class FrontController extends CController {
             return;
 
         }else{
-
+            Yii::app()->session['san_pham_price_guid'] =$_REQUEST["san_pham_price_guid"];;
             Yii::app()->session['san_pham_guid'] =$guid_id;
         }
+		$san_pham_price_guid = Common::getPara("san_pham_price_guid");
+        $sqlDetail ="SELECT  a.`san_pham_price_guid`,color_name,size_text, REPLACE( FORMAT(sp_price, 0),',','.') as  sp_price  FROM `san_pham_price` a,`m_size` b , m_color c
+WHERE a.`m_size_guid`= b.`m_size_guid`
+        AND c.`color_id` = a.`color_id`
+        AND   a.`san_pham_price_guid`='$san_pham_price_guid' ";
 
+		$datasan_pham_price =  CommonDB::GetAll($sqlDetail,[]);
+        $rowsan_pham_price=$datasan_pham_price[0];
         $dataspshow = $this->getChiTiet($guid_id);
-        $this->render('dathang',  array('dataspshow'=>$dataspshow));
+        $this->render('dathang',  array('dataspshow'=>$dataspshow,'rowsan_pham_price'=>$rowsan_pham_price));
     }
     public function getChiTiet($guid_id){
         $datasp= CommonDB::GetDataRowKeyGuid("san_pham",$guid_id);

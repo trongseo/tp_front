@@ -85,7 +85,7 @@ $dataSPCungLoai=[];
                 <a class="width-100p" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?> ">  <img src="item_image/<?php echo $datasp["hinh_dai_dien"] ?>" id="hinhdaidien"  style="max-height: 300px"  alt=""></a>
             </div>
 
-            <a class="btn-cart btn-simple mg-t-15" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?>"><i class="fa fa-caret-right"></i><span>xem chi tiết</span></a>
+            <a class="btn-cart btn-simple mg-t-15 btnchitiet" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?>"><i class="fa fa-caret-right"></i><span>xem chi tiết</span></a>
         </div>
     </div>
 
@@ -157,8 +157,13 @@ $dataSPCungLoai=[];
                         if(isFirst==1){
                             myTemplate1 = myTemplate1.replace(/xxxcheckedxxx/g, "checked");
                             isFirst=0;  $('#spprice').html(sp_price);
+
+							if(window.location.href.indexOf('tanphucglass.com')>-1){
+								 $('#spprice').html("(liên hệ)");
+							}
                         }
                         $(".listsize").append(myTemplate1);
+                        setLinkBuy();
 
                     }
                 }
@@ -190,8 +195,28 @@ $dataSPCungLoai=[];
         AjaxGetColor('<?php echo (isset($datamausp[0]['color_id'])?$datamausp[0]['color_id']:"0") ?>' );
         $(document).on('click', '.rdSelect', function () {
             var sp_price= $('input:radio[name=radiosize]:checked').attr('sp_price');
+
             $('#spprice').html(sp_price);
+            setLinkBuy();
+
+			if(window.location.href.indexOf('tanphucglass.com')>-1){
+								 $('#spprice').html("(liên hệ)");
+			}
+			
         });
+        function setLinkBuy(){
+            var san_pham_price_guid = $('input:radio[name=radiosize]:checked').attr('san_pham_price_guid');
+            var san_pham_guid= $('#san_pham_guid').val();//luon luon co hidden field
+            $( ".btn-cart" ).each(function( index ) {
+                var myhrr = "index.php?r=front/dathang&san_pham_guid="+san_pham_guid+"&san_pham_price_guid="+san_pham_price_guid;
+                $(this).attr('href',myhrr);
+            })
+            var myhrr1 = "index.php?r=front/sanphamchitiet&san_pham_guid="+san_pham_guid+"&san_pham_price_guid="+san_pham_price_guid;
+
+            $( ".btnchitiet").attr('href',myhrr1);
+//index.php?r=front/sanphamchitiet&san_pham_guid=
+            //index.php?r=front/dathang&san_pham_guid=B6421E04_E2BF_90C9_56A7_F34B58B99A16&san_pham_price_guid
+        }
         $(document).on('click', '.color_id', function () {
             color_id= $(this).attr('color_id');
             $('.color_id').removeClass('color_active');

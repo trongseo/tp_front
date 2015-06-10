@@ -34,6 +34,28 @@
                                     <td> <?php echo $value["email"]?> </td>
                                     <td> <?php echo $value["dienthoai"]?> /<?php echo $value["fax"]?> </td>
                                     <td> <?php echo $value["diachi"]?> <br/><?php echo $value["tieude"]?><br/><?php echo $value["noidung"]?>
+
+                                        <?php
+                                        $san_pham_price_guid = $value["san_pham_price_guid"];
+                                        $rowsan_pham_price=[];
+                                        $sqlDetail ="SELECT  a.`san_pham_price_guid`,color_name,size_text, REPLACE( FORMAT(sp_price, 0),',','.') as  sp_price  FROM `san_pham_price` a,`m_size` b , m_color c
+                                        WHERE a.`m_size_guid`= b.`m_size_guid`
+                                                AND c.`color_id` = a.`color_id`
+                                                AND   a.`san_pham_price_guid`='$san_pham_price_guid' ";
+
+                                      $datasan_pham_price =  CommonDB::GetAll($sqlDetail,[]);
+                                        if(count($datasan_pham_price)>0){
+                                            $rowsan_pham_price=$datasan_pham_price[0];
+                                            echo '<br/>';
+                                        echo $rowsan_pham_price["color_name"].'/';
+                                       echo $rowsan_pham_price["size_text"].'/Giá:';
+                                       echo $rowsan_pham_price["sp_price"];
+
+                                        }
+
+
+
+                                        ?>
                                     </td>
                                     <td>
                                         <button class="btn btn-info btn-sm cssdelete"  dondathang_guid="<?php echo $value["dondathang_guid"]?>" type="button" >Xóa</button>
@@ -111,5 +133,4 @@
             });
         }
 
-    });
-</script>
+    })
