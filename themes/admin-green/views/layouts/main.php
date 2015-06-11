@@ -139,7 +139,11 @@
                                 <i class="fa"></i> <span>Giới thiệu</span>
                                 <small class="badge pull-right bg-green"></small>
                             </a></li>
-
+							<li>
+                            <a href="index.php?r=adminchung/edit&guid=111">
+                                <i class="fa"></i> <span>Giới thiệu[Sỉ]</span>
+                                <small class="badge pull-right bg-green"></small>
+                            </a></li>
                         <li>
                             <a href="index.php?r=adminchung/lienhe">
                                 <i class="fa "></i> <span>Danh sách liên hệ </span>
@@ -159,6 +163,11 @@
                         <li>
                             <a href="index.php?r=adminchung/edit&guid=3">
                                 <i class="fa "></i> <span>Cập nhật liên hệ</span>
+                                <small class="badge pull-right bg-green"></small>
+                            </a></li>
+							<li>
+                            <a href="index.php?r=adminchung/edit&guid=333">
+                                <i class="fa "></i> <span>Cập nhật liên hệ [Sỉ]</span>
                                 <small class="badge pull-right bg-green"></small>
                             </a></li>
                     </ul>

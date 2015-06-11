@@ -121,7 +121,8 @@ imagedestroy($tmp1);
     <title>picture demo</title>
     
    <link href=".css" media="screen, projection" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+<!--	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/themes/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery_002.js"></script>
 <script type="text/javascript" src="js/displaymsg.js"></script>
 <script type="text/javascript" src="js/ajaxdelete.js"></script>

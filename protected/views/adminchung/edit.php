@@ -5,8 +5,8 @@
     </h1>
 
 </section>
+    <script type="text/javascript" src="/themes/jquery.form.js"></script>
 
-<script src="http://malsup.github.com/jquery.form.js"></script>
 <form id="myForm" action="index.php?r=adminchung/ajaxupdate" method="post" enctype="multipart/form-data">
 <section class="content  bordertop">
     <div class="row">

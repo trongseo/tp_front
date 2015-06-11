@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12" style="padding-left: 5px;padding-right: 5px">
+                <div class="col-md-4 col-sm-12">
                     <div class="img_banner">
                         <img src="item_image/trangchu/<?php echo $imgRight ?> " alt="" />
                     </div>

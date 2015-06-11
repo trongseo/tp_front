@@ -4,8 +4,17 @@ class FrontController extends CController {
 
     public $activemenu;
     public function actionIntro() {
-        $guid_id = '1';
-        $data = CommonDB::GetDataRowKeyGuid("aaachung",'1');
+       // var_dump($_SERVER["SERVER_NAME"]);
+        $guid_id = '111';
+        $mystring=$_SERVER["SERVER_NAME"];
+        $pos = strpos($mystring, "tanphucglass");
+
+
+        if ($pos === false) {
+            $guid_id = '1';
+        }
+
+        $data = CommonDB::GetDataRowKeyGuid("aaachung",$guid_id);
         $this->pageTitle = $data["aaatitle"];
         $this->activemenu="intro";
         $this->render('intro',  array('hsTable'=>$data));
@@ -41,8 +50,15 @@ class FrontController extends CController {
 
         }
         $this->pageTitle = "Liên hệ";
+        $guid_id = '333';
+        $mystring=$_SERVER["SERVER_NAME"];
+        $pos = strpos($mystring, "tanphucglass");
 
-        $data = CommonDB::GetDataRowKeyGuid("aaachung",'3');
+
+        if ($pos === false) {
+            $guid_id = '3';
+        }
+        $data = CommonDB::GetDataRowKeyGuid("aaachung",$guid_id);
         $this->render('contact',   array('hsTable'=>$data,'datanv'=>$datanv));
     }
     public function actionSupport() {
