@@ -50,7 +50,11 @@
     <!--[if lt IE 9]>
     <script type="text/javascript" src="themes/user-theme/js/html5shiv.js"></script>
     <script type="text/javascript" src="themes/user-theme/js/respond.min.js"></script>
+
     <![endif]-->
+    <style>
+
+    </style>
 <script>
     var CUR_URL='';
 </script>
@@ -65,7 +69,7 @@
                     <a class="home" href="index.php?r=first"></a>
                     <nav class="navbar navbar-new mobile-menu">
                         <a class="dropdown-link">Menu</a>
-                        <ul class="nav navbar-nav mobile-dropdown">
+                        <ul class="nav navbar-nav mobile-dropdown" style="display: block">
                             <li class="intro" >
                                 <a href="index.php?r=front/intro"><span class="underline">Giới Thiệu</span></a>
                             </li>
@@ -97,7 +101,7 @@
     <!-- Footer Start -->
     <footer class="footer"  id="footer">
         <div align="center"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3188478&c=9565747"></a></div>
-        <p class="text-center param-underbanner">Copyright@2015 <a href="http://kinhtanphuc.com" ><span class="underline">kinhtanphuc.com</span></a></p>
+        <p class="text-center param-underbanner">Copyright@2015 <a href="http://kinhtanphuc.com" ><span class="underline">kinhtanphuc</span></a></p>
     </footer>
     <!-- Footer END -->
 

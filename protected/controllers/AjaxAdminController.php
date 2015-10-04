@@ -7,6 +7,7 @@ class AjaxadminController extends UsersController {
 
         $this->pageTitle = 'Danh sách sản phẩm';
         $this->render('index',  array('model'=>""));
+
     }
     public  function  checkImageFile($ctrName){
         $max_file_size = 1024*2000; // 200kb

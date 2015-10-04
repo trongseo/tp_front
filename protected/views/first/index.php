@@ -67,9 +67,9 @@
             <div class="row">
                 <div class="col-md-12 menu-top">
                     <a class="home" href="index.html"></a>
-                    <nav class="navbar navbar-new mobile-menu">
+                    <nav class="navbar navbar-new mobile-menu" style="display: block">
                         <a class="dropdown-link">Menu</a>
-                        <ul class="nav navbar-nav mobile-dropdown">
+                        <ul class="nav navbar-nav mobile-dropdown"  style="display: block">
                             <li>
                                 <a href="index.php?r=front/intro"><span class="underline">Giới Thiệu</span></a>
                             </li>

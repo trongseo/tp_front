@@ -23,6 +23,14 @@
     .box-img{
         overflow: hidden;height: 300px;padding-top:3px;
     }
+    .funfact-item {
+        border: 1px solid #2b2829;
+        height: 94px;
+        width: 119px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 6px;
+    }
 </style>
 <?php
 $postSP =0;
@@ -82,7 +90,9 @@ $dataSPCungLoai=[];
         <div class="col-md-9 col-sm-8 col-xs-8 text-center">
 
             <div class="box-img">
-                <a class="width-100p" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?> ">  <img src="item_image/<?php echo $datasp["hinh_dai_dien"] ?>" id="hinhdaidien"  style="max-height: 300px"  alt=""></a>
+<!--                <a class="width-100p" href="index.php?r=front/sanphamchitiet&san_pham_guid=--><?php //echo $datasp["san_pham_guid"]?><!-- ">-->
+                <a class="width-100p btnchitiet" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?> ">
+                    <img src="item_image/<?php echo $datasp["hinh_dai_dien"] ?>" id="hinhdaidien"  style="max-height: 300px"  alt=""></a>
             </div>
 
             <a class="btn-cart btn-simple mg-t-15 btnchitiet" href="index.php?r=front/sanphamchitiet&san_pham_guid=<?php echo $datasp["san_pham_guid"]?>"><i class="fa fa-caret-right"></i><span>xem chi tiết</span></a>
@@ -97,6 +107,26 @@ $dataSPCungLoai=[];
 							</span>
             </h3>
             <div class="col-md-offset-2 col-md-9 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+
+
+
+                <?php foreach($dataSPCungLoai as $value):?>
+                    <?php
+                    $postSP++;
+                    if($value["san_pham_guid"]==$datasp["san_pham_guid"]){
+                        $curSP = $postSP;
+                    }
+                    ?>
+                    <div class="col-md-2 col-xs-6">
+                    <div class=" funfact-item   text-center">
+                        <a href=""><img src="item_image/icon_<?php echo $value["hinh_dai_dien"]?>" alt=""></a>
+                        <a class="detail" href="index.php?r=front/sanpham&guid=<?php echo $value["san_pham_guid"]?>"><span>chi tiết</span></a>
+                    </div>
+                    </div>
+
+                <?php endforeach?>
+            </div>
+            <div style="display: none" class="col-md-offset-2 col-md-9 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
                 <div class="owl-carousel">
 
                     <?php foreach($dataSPCungLoai as $value):?>
